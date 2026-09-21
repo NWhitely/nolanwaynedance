@@ -44,7 +44,7 @@
     </script>
     <script>(function(){try{var t=localStorage.getItem("nwd-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 </head>
-<body>
+<body class="page-home">
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
@@ -71,27 +71,46 @@
         </div>
     </nav>
 
-    <!-- Split-screen Hero -->
-    <section class="split-hero" id="hero">
-        <h1 class="visually-hidden">Nolan Wayne Dance: beginner-friendly dance lessons and wedding first dance choreography in Austin, TX</h1>
-        <a class="split-panel" href="wedding-services.html">
-            <img class="split-panel-bg" src="assets/photo1.jpg" alt="Couple sharing their wedding first dance">
-            <div class="split-panel-content">
-                <p class="panel-eyebrow">For your wedding day</p>
-                <h2>Wedding Dance Lessons</h2>
-                <p>Custom choreography for your big moment, taught step by step.</p>
-                <span class="panel-cta">Plan your first dance &rarr;</span>
+    <!-- Hero: the country shoot portrait, full-bleed. Shows the top half on load,
+         then scrolls down the photo and fades into the black band below. -->
+    <section class="noir-hero" id="hero">
+        <div class="noir-hero-media">
+            <picture>
+                <source type="image/webp" srcset="assets/nolan-hero.webp">
+                <img class="noir-hero-img" src="assets/nolan-hero.jpg" width="1520" height="2027" alt="Nolan Wayne in a black cowboy hat, sitting in a bright studio" fetchpriority="high">
+            </picture>
+        </div>
+        <div class="noir-hero-frame">
+            <div class="noir-hero-content">
+                <p class="hero-subtitle">Austin, Texas</p>
+                <h1><span>Nolan</span> <span>Wayne</span> <em>Dance</em><span class="visually-hidden">: beginner-friendly dance lessons and wedding first dance choreography in Austin, TX</span></h1>
+                <p class="noir-hero-lede">Private dance lessons and wedding first dances. No experience needed.</p>
+                <div class="hero-actions">
+                    <a class="btn" href="wedding-services.html">Wedding first dance</a>
+                    <a class="btn btn-outline" href="lessons.html">Private lessons</a>
+                </div>
             </div>
-        </a>
-        <a class="split-panel" href="lessons.html">
-            <img class="split-panel-bg" src="assets/photo7.jpg" alt="Couple laughing during a private dance lesson">
-            <div class="split-panel-content">
-                <p class="panel-eyebrow">Need Dance Lessons?</p>
-                <h2>Private Dance Lessons</h2>
-                <p>Private, beginner-friendly lessons in Ballroom, Country, Swing, and more.</p>
-                <span class="panel-cta">Explore lessons &rarr;</span>
+        </div>
+    </section>
+
+    <!-- Two paths (replaces the old split-photo hero) -->
+    <section class="noir-paths">
+        <div class="container">
+            <div class="noir-paths-grid fade-in-stagger">
+                <a class="noir-path" href="wedding-services.html">
+                    <p class="panel-eyebrow">For your wedding day</p>
+                    <h2>Wedding Dance Lessons</h2>
+                    <p>Custom choreography for your big moment, taught step by step.</p>
+                    <span class="noir-path-cta">Plan your first dance &rarr;</span>
+                </a>
+                <a class="noir-path" href="lessons.html">
+                    <p class="panel-eyebrow">Need dance lessons?</p>
+                    <h2>Private Dance Lessons</h2>
+                    <p>Private, beginner-friendly lessons in Ballroom, Country, Swing, and more.</p>
+                    <span class="noir-path-cta">Explore lessons &rarr;</span>
+                </a>
             </div>
-        </a>
+        </div>
     </section>
 
     <!-- Credibility strip -->
@@ -145,7 +164,7 @@
         <div class="container">
             <div class="about-content fade-in">
                 <div class="about-image">
-                    <img loading="lazy" decoding="async" src="assets/nolan-headshot.jpg" alt="Nolan Wayne - Dance Instructor in Austin, TX" class="about-photo">
+                    <img loading="lazy" decoding="async" src="assets/nolan-headshot-country.jpg" width="800" height="1000" alt="Nolan Wayne - Dance Instructor in Austin, TX" class="about-photo">
                 </div>
                 <div class="about-text">
                     <h3>Meet Nolan</h3>

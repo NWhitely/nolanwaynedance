@@ -1,11 +1,12 @@
 /* ==========================================================================
    Nolan Wayne Dance, shared stylesheet
    Used across index.html (home), wedding-services.html, and lessons.html.
-   Atelier system: Fraunces (display) + Montserrat (labels/body), gold on ivory.
+   Country Noir system: Fraunces (display) + Montserrat (labels/body).
+   Mostly black and white; brass is the only accent.
    ========================================================================== */
 
 :root {
-    color-scheme: light dark;
+    color-scheme: dark;
 
     /* Type roles */
     --display: 'Fraunces', Georgia, 'Times New Roman', serif;
@@ -16,69 +17,59 @@
     --reveal: 1.1s cubic-bezier(0.16, 1, 0.3, 1);
     --radius: 2px;
 
-    /* Metals (shared across themes) */
-    --gold-light: #e7cfa6;
-    --gold: #c9a87c;
-    --gold-deep: #a9875a;
-    --gold-grad: linear-gradient(120deg, #e7cfa6 0%, #c9a87c 48%, #a9875a 100%);
+    /* Palette, pulled from the country shoot: the black hat and shirt, the
+       backlit bone-white windows, brass from the bracelet, concrete floor. */
+    --noir: #0b0b0b;
+    --bone: #f1e9db;
+    --brass: #b8955e;
+    --brass-light: #d6bb8c;
+    --brass-deep: #8a6a3c;
+    --concrete: #8a7a6c;
 
-    /* Non-flipping: ivory text that always sits on dark sections/imagery */
-    --white: #fbf6ee;
-    --on-ink: #f3ece0;
+    /* Older rules still reference the "gold" names; they now mean brass */
+    --gold-light: var(--brass-light);
+    --gold: var(--brass);
+    --gold-deep: var(--brass-deep);
+    --gold-grad: linear-gradient(120deg, #d6bb8c 0%, #b8955e 50%, #8a6a3c 100%);
 
-    /* ---------- LIGHT (default): Noir Atelier on ivory ---------- */
-    --primary: #9c7544;
-    --primary-dark: #7d5c32;
-    --bg: #f6f1e8;
-    --bg-alt: #efe7d8;
-    --surface: #fffdf9;
-    --surface-2: #f1e9db;
-    --text: #1a1613;
-    --text-light: #6c6258;
-    --ink: #100d0b;
-    --accent: #e2d6c3;
-    --hairline: rgba(26, 22, 19, 0.14);
-    --hairline-strong: rgba(26, 22, 19, 0.28);
-    --overlay: rgba(16, 13, 11, 0.5);
-    --shadow: 0 40px 80px -40px rgba(16, 13, 11, 0.30);
-}
+    /* Non-flipping: white text that always sits on dark sections/imagery */
+    --white: #f7f4ee;
+    --on-ink: #f4f1eb;
 
-/* ---------- DARK: true black (auto, unless user forced light) ---------- */
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-        --primary: #d8b884;
-        --primary-dark: #c9a87c;
-        --bg: #000000;
-        --bg-alt: #070707;
-        --surface: #0c0b0a;
-        --surface-2: #131210;
-        --text: #f3ece0;
-        --text-light: #9b9183;
-        --ink: #000000;
-        --accent: #211d18;
-        --hairline: rgba(231, 207, 166, 0.16);
-        --hairline-strong: rgba(231, 207, 166, 0.32);
-        --overlay: rgba(0, 0, 0, 0.58);
-        --shadow: 0 40px 90px -40px rgba(0, 0, 0, 0.85);
-    }
-}
-
-/* ---------- DARK: manual override via the toggle ---------- */
-[data-theme="dark"] {
-    --primary: #d8b884;
-    --primary-dark: #c9a87c;
-    --bg: #000000;
-    --bg-alt: #070707;
-    --surface: #0c0b0a;
-    --surface-2: #131210;
-    --text: #f3ece0;
-    --text-light: #9b9183;
-    --ink: #000000;
-    --accent: #211d18;
-    --hairline: rgba(231, 207, 166, 0.16);
-    --hairline-strong: rgba(231, 207, 166, 0.32);
+    /* ---------- NOIR (default) ---------- */
+    --primary: #c9a871;
+    --primary-dark: #b8955e;
+    --bg: #0b0b0b;
+    --bg-alt: #111111;
+    --surface: #0f0f0f;
+    --surface-2: #181818;
+    --text: #f4f1eb;
+    --text-light: #a39b91;
+    --ink: #0b0b0b;
+    --accent: #262422;
+    --hairline: rgba(244, 241, 235, 0.12);
+    --hairline-strong: rgba(244, 241, 235, 0.28);
     --overlay: rgba(0, 0, 0, 0.58);
     --shadow: 0 40px 90px -40px rgba(0, 0, 0, 0.85);
+}
+
+/* ---------- LIGHT: opt-in via the toggle. Crisp white, black type ---------- */
+[data-theme="light"] {
+    color-scheme: light;
+    --primary: #8a6a3c;
+    --primary-dark: #6f5430;
+    --bg: #f8f6f2;
+    --bg-alt: #efece6;
+    --surface: #ffffff;
+    --surface-2: #f2efe9;
+    --text: #0b0b0b;
+    --text-light: #5d564e;
+    --ink: #0b0b0b;
+    --accent: #e3ded5;
+    --hairline: rgba(11, 11, 11, 0.12);
+    --hairline-strong: rgba(11, 11, 11, 0.28);
+    --overlay: rgba(11, 11, 11, 0.5);
+    --shadow: 0 40px 80px -40px rgba(11, 11, 11, 0.30);
 }
 
 * {
@@ -315,127 +306,6 @@ nav.scrolled {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
-}
-
-/* ===== Split-screen hero (home landing) ===== */
-.split-hero {
-    display: flex;
-    min-height: 100vh;
-}
-
-.split-panel {
-    position: relative;
-    flex: 1 1 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    color: var(--white);
-    padding: 6rem 2rem;
-    overflow: hidden;
-    transition: flex-grow 0.5s ease;
-}
-
-.split-panel + .split-panel {
-    border-left: 1px solid var(--primary);
-}
-
-.split-panel-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-    transition: transform 0.6s ease;
-}
-
-.split-panel::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    z-index: 1;
-    transition: background 0.4s ease;
-}
-
-.split-panel:hover::before {
-    background: rgba(0, 0, 0, 0.4);
-}
-
-.split-panel:hover .split-panel-bg {
-    transform: scale(1.06);
-}
-
-.split-panel-content {
-    position: relative;
-    z-index: 2;
-    max-width: 420px;
-}
-
-.split-panel .panel-eyebrow {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--primary);
-    margin-bottom: 1rem;
-}
-
-.split-panel h2 {
-    font-size: clamp(2rem, 4vw, 3.25rem);
-    color: var(--white);
-    line-height: 1.1;
-    margin-bottom: 1rem;
-}
-
-.split-panel p {
-    color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 1.75rem;
-    font-size: 1rem;
-}
-
-.split-panel .panel-cta {
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--white);
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 0.35rem;
-    transition: color 0.3s ease, letter-spacing 0.3s ease;
-}
-
-.split-panel:hover .panel-cta {
-    color: var(--primary);
-    letter-spacing: 3px;
-}
-
-/* Desktop: hovering one side expands it */
-@media (min-width: 769px) {
-    .split-hero:hover .split-panel {
-        flex-grow: 0.75;
-    }
-    .split-hero .split-panel:hover {
-        flex-grow: 1.5;
-    }
-}
-
-/* Mobile: stack the two panels */
-@media (max-width: 768px) {
-    .split-hero {
-        flex-direction: column;
-    }
-    .split-panel {
-        min-height: 50vh;
-        padding: 5rem 1.5rem;
-    }
-    .split-panel + .split-panel {
-        border-left: none;
-        border-top: 1px solid var(--primary);
-    }
 }
 
 /* Trust bar under the split hero */
@@ -1815,13 +1685,13 @@ body {
     background: linear-gradient(160deg, #2c2c2c 0%, #1a1816 100%);
     border: 1px solid var(--primary);
     border-radius: 32px;
-    box-shadow: 0 30px 60px -18px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(201, 168, 124, 0.25);
+    box-shadow: 0 30px 60px -18px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(184, 149, 94, 0.25);
     transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
 }
 
 .video-item:hover .video-frame {
     transform: translateY(-6px);
-    box-shadow: 0 42px 72px -18px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(201, 168, 124, 0.4);
+    box-shadow: 0 42px 72px -18px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(184, 149, 94, 0.4);
 }
 
 .video-frame video {
@@ -1881,8 +1751,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
-select:focus-visible,
-.split-panel:focus-visible {
+select:focus-visible {
     outline: 2px solid var(--primary);
     outline-offset: 3px;
     border-radius: 2px;
@@ -1961,14 +1830,9 @@ html.lenis, html.lenis body { height: auto; }
 }
 .theme-toggle:hover { border-color: var(--primary); color: var(--primary); transform: rotate(18deg); }
 .theme-toggle svg { width: 17px; height: 17px; display: block; }
-.theme-toggle .icon-sun { display: none; }
-.theme-toggle .icon-moon { display: block; }
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
-    :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
-}
-[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+/* Noir is the default, so the sun (switch to light) shows unless light is on */
+.theme-toggle .icon-sun { display: block; }
+.theme-toggle .icon-moon { display: none; }
 [data-theme="light"] .theme-toggle .icon-sun { display: none; }
 [data-theme="light"] .theme-toggle .icon-moon { display: block; }
 
@@ -1997,14 +1861,14 @@ html.lenis, html.lenis body { height: auto; }
     box-shadow: none;
 }
 .testimonial, .genre-card, .faq-item, .dwts-card, .contact-form, .path-card,
-.gallery-item, .gallery-item img, .about-image, .about-photo, .split-panel-bg,
+.gallery-item, .gallery-item img, .about-image, .about-photo,
 .dwts-media, .dwts-media img, .pricing-simple {
     border-radius: 0;
 }
 
 /* ---- Media: zoom-on-scroll hooks (GSAP animates the inner img) ---- */
-.gallery-item, .about-image, .dwts-media, .split-panel, .hero { overflow: hidden; }
-.gallery-item img, .about-photo, .dwts-media img, .split-panel-bg {
+.gallery-item, .about-image, .dwts-media, .hero { overflow: hidden; }
+.gallery-item img, .about-photo, .dwts-media img {
     will-change: transform;
     transform: scale(1.001);
 }
@@ -2018,7 +1882,7 @@ html.lenis, html.lenis body { height: auto; }
 /* ---- Accessibility: respect reduced motion ---- */
 @media (prefers-reduced-motion: reduce) {
     .reveal, .reveal-line { opacity: 1 !important; transform: none !important; }
-    .gallery-item img, .about-photo, .dwts-media img, .split-panel-bg { transform: none !important; }
+    .gallery-item img, .about-photo, .dwts-media img { transform: none !important; }
     html { scroll-behavior: auto; }
 }
 
@@ -2124,11 +1988,12 @@ html.lenis, html.lenis body { height: auto; }
    POLISH OVERRIDES — buttons, inclusive badge, hero headline rhythm
    ========================================================================== */
 
-/* Buttons: flat editorial. No lift, no glow, no pulse — fill flips to outline. */
+/* Buttons: flat editorial, black and white. No lift, no glow, no pulse.
+   Fill is the text color (white on noir, black on light) and flips to outline. */
 .btn {
-    background: var(--primary);
-    color: var(--ink);
-    border: 1px solid var(--primary);
+    background: var(--text);
+    color: var(--bg);
+    border: 1px solid var(--text);
     border-radius: 0;
     padding: 1.05rem 2.4rem;
     font-family: var(--sans);
@@ -2141,15 +2006,18 @@ html.lenis, html.lenis body { height: auto; }
 }
 .btn:hover {
     background: transparent;
-    color: var(--primary);
+    color: var(--text);
     transform: none;
     box-shadow: none;
 }
 .btn-primary-pulse, .btn-primary-pulse:hover { animation: none; }
 .btn-outline { background: transparent; color: var(--text); border-color: var(--hairline-strong); }
-.btn-outline:hover { background: transparent; color: var(--primary); border-color: var(--primary); }
-.btn-light { background: var(--white); color: var(--ink); border-color: var(--white); }
-.btn-light:hover { background: transparent; color: var(--white); border-color: var(--white); }
+.btn-outline:hover { background: transparent; color: var(--text); border-color: var(--text); }
+/* Dark video/photo heroes stay dark in both themes: white fill, white outline */
+.hero .btn { background: var(--white); color: var(--noir); border-color: var(--white); }
+.hero .btn:hover { background: transparent; color: var(--white); }
+.btn-light, .hero .btn-light { background: transparent; color: var(--white); border-color: rgba(247, 244, 238, 0.6); }
+.btn-light:hover, .hero .btn-light:hover { background: var(--white); color: var(--noir); border-color: var(--white); }
 
 /* Inclusive badge: lose the gradient card, become a hairline-bounded inline mark. */
 .inclusive-badge {
@@ -2271,19 +2139,8 @@ html.lenis, html.lenis body { height: auto; }
 .reviews-more:hover { border-color: var(--primary); color: var(--primary); }
 
 /* ==========================================================================
-   Home hero size + transparent overlay nav + panel legibility
+   Transparent overlay nav over the hero
    ========================================================================== */
-/* Bigger, more immersive split panels (each near-full-screen on mobile) */
-.split-panel { min-height: 100svh; }
-@media (max-width: 768px) {
-    .split-panel { min-height: 90svh; padding: 5rem 1.5rem; }
-}
-
-/* Panels always sit on dark imagery in BOTH themes -> force bright, legible text */
-.split-panel .panel-eyebrow { color: var(--gold-light); text-shadow: 0 1px 10px rgba(0,0,0,.6); }
-.split-panel h2 { text-shadow: 0 2px 22px rgba(0,0,0,.55); }
-.split-panel p { text-shadow: 0 1px 14px rgba(0,0,0,.55); }
-
 /* Transparent overlay nav over the hero; solidifies to glass once scrolled */
 #navbar {
     background: transparent;
@@ -2305,31 +2162,6 @@ html.lenis, html.lenis body { height: auto; }
     border-bottom-color: var(--hairline);
 }
 
-/* ==========================================================================
-   Mobile split-hero: animated side-by-side (auto-alternating expand)
-   The active panel grows + shows full content; the other slims to a teaser.
-   ========================================================================== */
-@media (max-width: 768px) {
-    .split-hero { flex-direction: row; }
-    .split-panel {
-        min-height: 88svh;
-        padding: 2.5rem 1rem;
-        flex: 1 1 0;
-        transition: flex-grow 0.9s var(--ease);
-    }
-    .split-panel.is-active { flex-grow: 2.6; }
-    .split-panel + .split-panel { border-left: 1px solid var(--primary); border-top: none; }
-    .split-panel-content { max-width: 100%; }
-    .split-panel h2 { font-size: clamp(1.5rem, 6.5vw, 2.1rem); line-height: 1.1; }
-    /* Collapsed panels show just their title; full content fades in when active */
-    .split-panel .panel-eyebrow,
-    .split-panel p,
-    .split-panel .panel-cta { opacity: 0; transition: opacity 0.5s var(--ease); }
-    .split-panel.is-active .panel-eyebrow,
-    .split-panel.is-active p,
-    .split-panel.is-active .panel-cta { opacity: 1; }
-}
-
 /* ===== Instagram feed (home, before footer) ===== */
 .instagram { background: var(--bg); }
 .instagram-feed {
@@ -2344,3 +2176,217 @@ html.lenis, html.lenis body { height: auto; }
     text-align: center;
     margin-top: 2.5rem;
 }
+
+/* ==========================================================================
+   COUNTRY NOIR: home hero (the country shoot portrait), the two-path band,
+   and the black-and-white polish. Loaded last; overrides earlier rules.
+   ========================================================================== */
+
+/* The hero is as tall as the photo at full width (capped), so it opens on the
+   top half (hat and face) and scrolling runs down the picture into the black. */
+.noir-hero {
+    position: relative;
+    height: max(100svh, min(133.3vw, 175svh));
+    padding: 0;
+    overflow: hidden;
+    background: var(--noir);
+    isolation: isolate;
+}
+.noir-hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    transform-origin: 50% 25%;
+    animation: noir-settle 2.4s var(--ease) both;
+}
+.noir-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 0%;
+    will-change: transform;
+}
+/* melt the bottom of the photo into the black band below */
+.noir-hero::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 42svh;
+    background: linear-gradient(to bottom, rgba(11, 11, 11, 0), var(--noir));
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* First screen holds the headline, black type over the bright window light */
+.noir-hero-frame {
+    position: relative;
+    z-index: 2;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 0 4rem 5.5vw;
+}
+/* soft bone wash on the left so the type sits clean over the window bars */
+.noir-hero-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(241, 233, 219, 0.92) 0%, rgba(241, 233, 219, 0.72) 19%, rgba(241, 233, 219, 0) 35%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent);
+    mask-image: linear-gradient(to bottom, #000 72%, transparent);
+    z-index: -1;
+    pointer-events: none;
+}
+.noir-hero-content { width: 21rem; max-width: 36vw; color: var(--noir); }
+.noir-hero .hero-subtitle { color: var(--noir); margin-bottom: 1.4rem; }
+.noir-hero h1 {
+    font-size: clamp(3.4rem, 6vw, 6.5rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    color: var(--noir);
+    margin-bottom: 1.6rem;
+}
+.noir-hero h1 > span:not(.visually-hidden),
+.noir-hero h1 em { display: block; }
+.noir-hero h1 em { font-style: italic; color: var(--brass-deep); }
+.noir-hero-lede {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #2a2622;
+    max-width: min(19rem, 24vw);
+    margin-bottom: 2rem;
+}
+.noir-hero .hero-actions { display: inline-flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
+.noir-hero .hero-actions .btn { text-align: center; }
+.noir-hero .btn { background: var(--noir); color: var(--bone); border-color: var(--noir); }
+.noir-hero .btn:hover { background: transparent; color: var(--noir); }
+.noir-hero .btn-outline { background: transparent; color: var(--noir); border-color: rgba(11, 11, 11, 0.45); }
+.noir-hero .btn-outline:hover { background: var(--noir); color: var(--bone); border-color: var(--noir); }
+
+/* Headline settles in after the photo */
+.noir-hero-content > * { animation: noir-rise 0.9s var(--ease) both; }
+.noir-hero-content > :nth-child(1) { animation-delay: 0.35s; }
+.noir-hero-content > :nth-child(2) { animation-delay: 0.47s; }
+.noir-hero-content > :nth-child(3) { animation-delay: 0.59s; }
+.noir-hero-content > :nth-child(4) { animation-delay: 0.71s; }
+
+@keyframes noir-settle { from { transform: scale(1.1); } to { transform: none; } }
+@keyframes noir-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+/* Phones + portrait screens: the photo fills the screen top to boots, and the
+   type moves to the bottom, white over the dark bench and floor. */
+@media (max-width: 900px), (max-aspect-ratio: 1/1) {
+    .noir-hero { height: 100svh; }
+    .noir-hero::after { display: none; }
+    .noir-hero-frame { align-items: flex-end; padding: 6rem 1.5rem 3rem; }
+    .noir-hero-frame::before {
+        background: linear-gradient(to bottom, rgba(11, 11, 11, 0) 36%, rgba(11, 11, 11, 0.55) 58%, rgba(11, 11, 11, 0.95) 100%);
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+    .noir-hero-content { width: 100%; max-width: 30rem; color: var(--white); }
+    .noir-hero .hero-subtitle { color: var(--brass-light); margin-bottom: 0.9rem; }
+    .noir-hero h1 { font-size: clamp(2.8rem, 12vw, 4.4rem); line-height: 1; color: var(--white); margin-bottom: 1rem; }
+    .noir-hero h1 > span:not(.visually-hidden) { display: inline; }
+    .noir-hero h1 em { color: var(--brass-light); }
+    .noir-hero-lede { color: rgba(247, 244, 238, 0.86); max-width: 22rem; margin-bottom: 1.6rem; }
+    .noir-hero .hero-actions { align-items: stretch; gap: 0.6rem; }
+    .noir-hero .btn { background: var(--white); color: var(--noir); border-color: var(--white); text-align: center; }
+    .noir-hero .btn:hover { background: transparent; color: var(--white); }
+    .noir-hero .btn-outline { background: transparent; color: var(--white); border-color: rgba(247, 244, 238, 0.6); }
+    .noir-hero .btn-outline:hover { background: var(--white); color: var(--noir); border-color: var(--white); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .noir-hero-media,
+    .noir-hero-content > * { animation: none; }
+}
+
+/* Home nav sits on the bright photo until scrolled: black type */
+.page-home #navbar:not(.scrolled) .wordmark,
+.page-home #navbar:not(.scrolled) .theme-toggle { color: var(--noir); text-shadow: none; }
+.page-home #navbar:not(.scrolled) .theme-toggle { border-color: rgba(11, 11, 11, 0.35); }
+.page-home #navbar:not(.scrolled) .mobile-menu-btn span { background: var(--noir); }
+@media (min-width: 769px) {
+    .page-home #navbar:not(.scrolled) .nav-links a { color: var(--noir); text-shadow: none; }
+    .page-home #navbar:not(.scrolled) .nav-links a::after { background: var(--noir); }
+}
+
+/* Two paths: always a black band, in both themes */
+.noir-paths {
+    background: var(--noir);
+    color: var(--on-ink);
+    padding-block: clamp(4rem, 10vh, 7.5rem);
+}
+.noir-paths-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.noir-path {
+    display: block;
+    padding: 0.5rem clamp(1.5rem, 4vw, 4rem);
+    color: inherit;
+    text-decoration: none;
+}
+.noir-path + .noir-path { border-left: 1px solid rgba(244, 241, 235, 0.14); }
+.noir-path .panel-eyebrow { color: var(--brass-light); margin-bottom: 1rem; }
+.noir-path h2 {
+    font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+.noir-path p { color: rgba(244, 241, 235, 0.66); max-width: 26rem; margin-bottom: 1.75rem; }
+.noir-path-cta {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--white);
+    border-bottom: 1px solid var(--brass);
+    padding-bottom: 0.4rem;
+    transition: letter-spacing 0.35s var(--ease), color 0.35s var(--ease);
+}
+.noir-path:hover .noir-path-cta { letter-spacing: 0.26em; color: var(--brass-light); }
+@media (max-width: 768px) {
+    .noir-paths { padding-block: 1rem 2.5rem; }
+    .noir-paths-grid { grid-template-columns: 1fr; }
+    .noir-path { padding: 2.25rem 0; }
+    .noir-path + .noir-path { border-left: none; border-top: 1px solid rgba(244, 241, 235, 0.14); }
+}
+
+/* Black-and-white polish: the sparkle flourish becomes one short brass rule,
+   and the heavy brass side rules go to hairlines */
+.flourish { gap: 0; margin: 1.25rem auto 1.5rem; }
+.flourish::before { width: 48px; background: var(--primary); }
+.flourish::after,
+.flourish-icon { display: none; }
+.testimonial { border-left-width: 1px; }
+.testimonial-form-wrap { border-left-width: 1px; }
+
+/* Nav: keep the theme toggle a true circle on narrow screens */
+.theme-toggle { flex-shrink: 0; }
+@media (max-width: 768px) {
+    .wordmark { font-size: 1.2rem; }
+    .theme-toggle { margin-left: auto; margin-right: 0.75rem; }
+}
+
+/* Dark video heroes stay dark in both themes, so their italic accent stays light brass */
+.hero h1 em { color: var(--brass-light); }
+
+/* Inline links in section intros (e.g. the Instagram handle) */
+.section-header p a {
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-color: var(--primary);
+    text-underline-offset: 3px;
+}
+.section-header p a:hover { color: var(--primary); }
+
+/* Keep the home page black and white: the DWTS photo is grayscale until hovered */
+.dwts-media img { filter: grayscale(100%); transition: transform 1.3s var(--ease), filter 0.6s var(--ease); }
+.dwts-card:hover .dwts-media img { filter: none; }

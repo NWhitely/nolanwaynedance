@@ -204,34 +204,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 })();
 
 /* ==========================================================================
-   Theme toggle — follows system by default; an explicit choice persists.
+   Theme toggle — noir (dark) is the brand default; light is opt-in and persists.
    (A tiny inline script in <head> applies the saved choice before paint.)
    ========================================================================== */
 (function () {
     const root = document.documentElement;
     const KEY = 'nwd-theme';
     const toggle = document.getElementById('themeToggle');
-    const mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 
-    function isDark() {
-        const set = root.getAttribute('data-theme');
-        if (set === 'dark') return true;
-        if (set === 'light') return false;
-        return !!(mq && mq.matches);
-    }
+    const isDark = () => root.getAttribute('data-theme') !== 'light';
     if (toggle) {
         toggle.addEventListener('click', () => {
             const next = isDark() ? 'light' : 'dark';
             root.setAttribute('data-theme', next);
             try { localStorage.setItem(KEY, next); } catch (e) {}
             if (window.ScrollTrigger) window.ScrollTrigger.refresh();
-        });
-    }
-    // Keep following the system live until the visitor makes a choice.
-    if (mq) {
-        mq.addEventListener('change', () => {
-            let saved = null; try { saved = localStorage.getItem(KEY); } catch (e) {}
-            if (!saved) root.removeAttribute('data-theme');
         });
     }
 })();
@@ -272,12 +259,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         gsap.registerPlugin(ScrollTrigger);
         if (window.__lenis) window.__lenis.on('scroll', ScrollTrigger.update);
 
-        gsap.utils.toArray('.split-panel-bg').forEach((bg) => {
-            gsap.fromTo(bg, { yPercent: -8 }, {
-                yPercent: 8, ease: 'none',
-                scrollTrigger: { trigger: bg.closest('.split-panel') || bg, start: 'top bottom', end: 'bottom top', scrub: true }
+        // Home hero: the photo drifts slower than the page as you scroll down it,
+        // and the headline fades out over the first screen.
+        const hero = document.querySelector('.noir-hero');
+        if (hero) {
+            gsap.to('.noir-hero-img', {
+                yPercent: 16, ease: 'none',
+                scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true }
             });
-        });
+            gsap.to('.noir-hero-content', {
+                autoAlpha: 0, y: -48, ease: 'none',
+                scrollTrigger: { trigger: hero, start: 'top top', end: () => '+=' + window.innerHeight * 0.6, scrub: true }
+            });
+        }
 
         const refresh = () => ScrollTrigger.refresh();
         window.addEventListener('load', refresh);
@@ -305,42 +299,3 @@ document.querySelectorAll('.reviews-more').forEach((btn) => {
         }
     });
 });
-
-/* ==========================================================================
-   Mobile: animated side-by-side split hero (auto-alternating expand).
-   Desktop keeps its hover-to-expand; this is the touch equivalent.
-   ========================================================================== */
-(function () {
-    const hero = document.querySelector('.split-hero');
-    if (!hero) return;
-    const panels = [...hero.querySelectorAll('.split-panel')];
-    if (panels.length < 2) return;
-
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const mq = window.matchMedia('(max-width: 768px)');
-    let i = 0, timer = null, io = null;
-
-    const show = (n) => panels.forEach((p, idx) => p.classList.toggle('is-active', idx === n));
-    const stop = () => { clearInterval(timer); timer = null; };
-    function start() {
-        if (reduce) { show(0); return; }      // one expanded, no motion
-        if (timer) return;
-        show(i);
-        timer = setInterval(() => { i = (i + 1) % panels.length; show(i); }, 4200);
-    }
-    function apply() {
-        stop();
-        if (mq.matches) {
-            start();
-            if (!io) {
-                io = new IntersectionObserver((es) => es.forEach(e => e.isIntersecting ? start() : stop()));
-                io.observe(hero);
-            }
-        } else {
-            if (io) { io.disconnect(); io = null; }
-            panels.forEach(p => p.classList.remove('is-active'));
-        }
-    }
-    apply();
-    mq.addEventListener('change', apply);
-})();
