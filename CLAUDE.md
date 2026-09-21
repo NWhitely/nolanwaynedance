@@ -80,7 +80,7 @@ Claude can't watch a live browser window — it "sees" the site by rendering it 
 
 **1. Serve the static site (background):**
 ```
-python3 -m http.server 8765 --directory /Users/nolan/Documents/FirstDanceByNolan
+python3 -m http.server 8765 --directory /Users/nolan/Documents/NolanWayneDance
 ```
 
 **2. Playwright + Chromium** live under `/tmp/nwdshot` (browser binary cached in

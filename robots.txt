@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dancebynolan.com/sitemap.xml
+Sitemap: https://nolanwaynedance.com/sitemap.xml

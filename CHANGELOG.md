@@ -2,6 +2,22 @@
 
 All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, originally First Dance by Nolan).
 
+## 2026-09-21
+
+### Country Noir redesign
+- **New home hero:** the split wedding/lessons photo hero is gone. The home page now opens on the country shoot portrait (`assets/Country Shoot/BA081E9B…jpeg`, exported as `assets/nolan-hero.jpg` + `.webp`), full-bleed. Desktop opens on the top half (hat and face) and scrolling runs down the photo into a black band; phones show the whole photo with the type at the bottom over the dark bench. Headline is "Nolan Wayne Dance" with two CTAs (Weddings / Lessons).
+- **Two-path band:** the old split panels' copy now lives in a black two-column band under the hero, so the Weddings/Lessons choice is still one scroll away.
+- **Palette:** swapped gold-on-ivory for Country Noir, pulled from the photo: black, bone white, brass (the only accent), concrete. Noir is now the default for every visitor; light is opt-in via the toggle (previously followed the system setting). Buttons are black/white instead of gold; the ✦ flourish is now a short brass rule.
+- **Headshot:** all three pages use a 4:5 crop of the same portrait (`assets/nolan-headshot-country.jpg`), still grayscale.
+- **Home DWTS photo** is grayscale until hovered, so the home page reads black and white.
+- **Fixes:** theme toggle no longer squishes into an oval on phones; Instagram handle link no longer shows browser-default purple; wedding hero's italic accent is readable in light mode.
+- Removed the split-hero CSS/JS (including its mobile auto-alternating panels).
+
+### Rename to match nolanwaynedance.com
+- GitHub repo renamed `firstdancebynolan` → `nolanwaynedance` (GitHub redirects the old URL; Pages custom domain unchanged). Local folder renamed `FirstDanceByNolan` → `NolanWayneDance`.
+- `robots.txt` sitemap pointed at `dancebynolan.com`; now `nolanwaynedance.com`.
+- **Link preview:** `og-image.jpg` was still the old wedding stock photo. Rebuilt from the country shoot portrait with the Nolan Wayne Dance name (`make_og_image.py`). Removed the stale `og-image.svg` ("Dance by Nolan" template, unused).
+
 ## 2026-06-30
 
 ### Facebook Marketplace takedown fix (wedding listing)
@@ -218,4 +234,4 @@ Grew the two early Marketplace graphics (see 2026-06-22) into a four-angle syste
 - [x] ~~Add a testimonial submission form~~ (done: Web3Forms, lessons + weddings pages)
 - [ ] Replace seeded/illustrative testimonials with real client reviews as the form collects them
 - [ ] Swap the hero background video for original footage (currently Pexels stock)
-- [ ] Confirm `og-image.jpg` exists and reflects the Nolan Wayne Dance brand (referenced in social-share meta on all pages)
+- [x] ~~Confirm `og-image.jpg` reflects the Nolan Wayne Dance brand~~ (done 2026-09-21: `make_og_image.py`)
