@@ -1969,8 +1969,11 @@ html.lenis, html.lenis body { height: auto; }
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
-        padding: 0 1.25rem 1.25rem;
+        /* top padding leaves room for the decorative quote mark, which sits
+           above each card and was being clipped by the scroller */
+        padding: 2rem 1.25rem 1.25rem;
         margin-inline: -1.25rem;
+        margin-top: -1.25rem;
     }
     .testimonial-grid::-webkit-scrollbar { display: none; }
     .testimonial-grid > .testimonial {

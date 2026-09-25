@@ -4,6 +4,13 @@ All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, o
 
 ## 2026-09-25
 
+### Copy audit + West Coast Swing
+- **Swing is now West Coast Swing** on the lessons page (card, description, about paragraph, what's-included list, and the two FAQs that named it). The old card described East Coast Swing.
+- **"Meet Nolan" heading is now "Nolan"** on all three pages.
+- **Pass over every description for overselling.** Cut the banned-list words (`actually`, `perfect`, `tailored`, `next level`, `show-stopping`, `shine`), the adjective triads ("Elegant, classic, and a wonderful place to start"; "Bouncy, playful, and a blast"), and claims that were doing too much ("you'll look like you've been dancing together for years", "A stress-free, fun experience (I promise!)", "Reach out and let's make it happen", "That's the perfect time to start"). Shorter and plainer throughout: genre cards, how-it-works steps, both FAQ sets, what's-included lists, pricing and contact intros, and the home path card.
+- **Mobile testimonials:** the swipe container had no room above the cards, so the decorative quote mark on top of each box was sliced off. Added top padding (and pulled the container up to keep the spacing).
+
+
 - **Home hero headline** was the stacked brand name ("Nolan / Wayne / Dance"), which read like a logo rather than a message (the nav wordmark already says it). Now "Book Private Lessons". The keyword line for search engines stays in the h1, hidden.
 - **Instagram handle** is now **@n.wayne_** (was @nolanwaynedance). Updated every link, the footer, and the `sameAs` schema on all three pages, plus `social-captions.md` and CLAUDE.md. Still carrying the old handle: the `promo-*.jpg` cards have it burned into the artwork, and the Behold feed embed should be checked.
 
