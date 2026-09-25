@@ -4,6 +4,12 @@ All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, o
 
 ## 2026-09-25
 
+### Promo cards rebuilt
+- All eight cards (four 1080x1080 squares, four 1080x1920 stories) regenerated with **@n.wayne_** and **16+ years teaching & competing** (they still had @nolanwaynedance and 10+ years burned into the artwork).
+- The original Pillow compositor was lost with `/tmp` (see 2026-06-30), so `make_promo_cards.py` is now **in the repo** alongside `make_marketplace_safe_card.py`. Same house style: brass frame, Fraunces headline, Montserrat labels, per-card photo and styles line, "Book a FREE Introductory Lesson" pill on the squares only. Brass now matches the site palette.
+- Unchanged by design: no price or dated promo on the art, no DWTSA line, country card keeps its 1st Place credential and photo credit.
+- Still worth checking: the Behold Instagram feed embed on the home page, after the handle change.
+
 ### Meet Nolan bio
 - Nolan rewrote the about copy; lightly cleaned and applied to all three pages. New facts: **16+ years dancing**, Ballroom (International and American), Country and West Coast Swing, musical theatre as a kid, Ballroom in college, **Master-qualified on the UCWDC circuit**, currently social dancing and competing in West Coast Swing, and Dancing with the Stars Austin now at **close to $3 million a year** (was "over 10 years" and "$2 million"). Kept the Center for Child Protection context.
 - Lessons and weddings keep their page-specific paragraphs; only the credentials paragraph was swapped so the facts match everywhere.
