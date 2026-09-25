@@ -4,6 +4,14 @@ All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, o
 
 ## 2026-09-25
 
+### SEO pass
+- **Headlines now carry the searched phrase.** Lessons went from "Your First Lesson Starts Here" to **"Private Dance Lessons in Austin"** (eyebrow became "No experience needed"), weddings from "A First Dance, designed uniquely for you" to **"Wedding First Dance Lessons in Austin"** (eyebrow "Custom choreography"). The keywords were previously only in hidden h1 text, which is weaker; the home page's hidden tail was trimmed to a plain sentence.
+- **FAQPage schema** on lessons and weddings, generated from the six questions already on each page (so the markup always matches what a visitor sees). Makes them eligible for FAQ rich results.
+- **Meta descriptions** cut from 219-228 chars to 135-147, since Google truncates around 155.
+- **Sitemap** now carries `lastmod`.
+- **Self-hosted fonts.** The Google Fonts stylesheet was a render-blocking third-party request before any text painted. Fonts are now served from `fonts/*.woff2` with `font-display: swap` and preload hints on the two main faces. Built with fontTools: subset to Latin, `SOFT`/`WONK` axes pinned and weight limited to 300-700, `opsz` kept on the roman (pinning it thinned the nav wordmark) and pinned to 144 on the italic, which is display-only. 73KB + 44KB + 29KB. Fraunces Italic was added (the repo only had the roman, so self-hosting without it would have lost the real italic in the hero headlines).
+- Not code, and the bigger levers: a **Google Business Profile** (service-area, no address published) with reviews, **Search Console** domain verification, and **analytics with a form-submit conversion** before paying for ads.
+
 ### Promo cards rebuilt
 - All eight cards (four 1080x1080 squares, four 1080x1920 stories) regenerated with **@n.wayne_** and **16+ years teaching & competing** (they still had @nolanwaynedance and 10+ years burned into the artwork).
 - The original Pillow compositor was lost with `/tmp` (see 2026-06-30), so `make_promo_cards.py` is now **in the repo** alongside `make_marketplace_safe_card.py`. Same house style: brass frame, Fraunces headline, Montserrat labels, per-card photo and styles line, "Book a FREE Introductory Lesson" pill on the squares only. Brass now matches the site palette.

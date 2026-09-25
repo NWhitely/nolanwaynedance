@@ -5,6 +5,31 @@
    Mostly black and white; brass is the only accent.
    ========================================================================== */
 
+/* Self-hosted type: same origin, so no third-party round trip before text
+   paints. Variable weight 300-700; Fraunces is pinned to its display optical
+   size. Rebuild with the fontTools steps noted in the changelog. */
+@font-face {
+    font-family: 'Fraunces';
+    src: url('fonts/fraunces-var.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fraunces';
+    src: url('fonts/fraunces-italic-var.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/montserrat-var.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     color-scheme: dark;
 
