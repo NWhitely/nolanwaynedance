@@ -4,6 +4,13 @@ All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, o
 
 ## 2026-09-25
 
+### Meet Nolan bio
+- Nolan rewrote the about copy; lightly cleaned and applied to all three pages. New facts: **16+ years dancing**, Ballroom (International and American), Country and West Coast Swing, musical theatre as a kid, Ballroom in college, **Master-qualified on the UCWDC circuit**, currently social dancing and competing in West Coast Swing, and Dancing with the Stars Austin now at **close to $3 million a year** (was "over 10 years" and "$2 million"). Kept the Center for Child Protection context.
+- Lessons and weddings keep their page-specific paragraphs; only the credentials paragraph was swapped so the facts match everywhere.
+- Heading is back to **"Meet Nolan"** (the plain "Nolan" from earlier today read worse).
+- Cleanups to the draft: fixed "milion", "I specialize from teaching", and the doubled "break down every problem down"; dropped the "whether we're working on X or Y" formula and "please don't hesitate to reach out".
+- `marketplace-listing-wedding.md` and the CLAUDE.md example now say 16+ years. The `promo-*.jpg` cards still have "10+ years" in the artwork.
+
 ### Copy audit + West Coast Swing
 - **Swing is now West Coast Swing** on the lessons page (card, description, about paragraph, what's-included list, and the two FAQs that named it). The old card described East Coast Swing.
 - **"Meet Nolan" heading is now "Nolan"** on all three pages.

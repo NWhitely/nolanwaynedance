@@ -53,7 +53,7 @@ These read as AI. Avoid them entirely:
   where there's room to explain it (it's a Center for Child Protection charity fundraiser
   that's raised $2M+/yr, not the TV show). Keep it OFF standalone marketplace cards/graphics:
   with no context a stranger reads it as the TV show and feels misled. On cards, use proof
-  tied to the piece instead (e.g. a competition result + event, "10+ years teaching").
+  tied to the piece instead (e.g. a competition result + event, "16+ years teaching").
 
 ## Leave alone
 

@@ -38,7 +38,7 @@ How it works:
 - 45 minute lessons, $90 each
 - In your home, at a studio, or over video
 - Austin and the surrounding area
-- 10+ years teaching and competing
+- 16+ years dancing, teaching and competing
 
 The first lesson is low key. We run through your song and see what's doable, no
 commitment after that.
