@@ -41,7 +41,7 @@ nightclub two-step, polka, waltz, cha cha, east coast and west coast swing.
 
 Book a free introductory lesson now. Message me and tell me what you're after.
 
-nolanwaynedance.com · @nolanwaynedance
+nolanwaynedance.com · @n.wayne_
 
 ---
 
@@ -65,7 +65,7 @@ in Austin.
 
 Book a free introductory lesson now. Send me your song and your wedding date to get started.
 
-nolanwaynedance.com · @nolanwaynedance
+nolanwaynedance.com · @n.wayne_
 
 ---
 
@@ -89,7 +89,7 @@ years teaching.
 
 Book a free introductory lesson now. Tell me what you've got in mind and we'll find a starting point.
 
-nolanwaynedance.com · @nolanwaynedance
+nolanwaynedance.com · @n.wayne_
 
 ---
 
@@ -113,7 +113,7 @@ Over 10 years teaching.
 
 Book a free introductory lesson now. Send me a message and we'll set it up.
 
-nolanwaynedance.com · @nolanwaynedance
+nolanwaynedance.com · @n.wayne_
 
 ---
 

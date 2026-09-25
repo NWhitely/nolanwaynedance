@@ -1,6 +1,6 @@
 # Nolan Wayne Dance — project notes
 
-Brand: **Nolan Wayne Dance** (nolanwaynedance.com, @nolanwaynedance). Formerly
+Brand: **Nolan Wayne Dance** (nolanwaynedance.com, @n.wayne_). Formerly
 "Dance by Nolan" / dancebynolan.com, which now 301-forwards here. The instructor goes
 by **Nolan Wayne** across both dance and founder work (one public persona); legal name
 Nolan Whitely is kept off the public site. No public email is shown on the site or in

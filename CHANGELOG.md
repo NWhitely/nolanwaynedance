@@ -2,6 +2,11 @@
 
 All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, originally First Dance by Nolan).
 
+## 2026-09-25
+
+- **Home hero headline** was the stacked brand name ("Nolan / Wayne / Dance"), which read like a logo rather than a message (the nav wordmark already says it). Now "Book Private Lessons". The keyword line for search engines stays in the h1, hidden.
+- **Instagram handle** is now **@n.wayne_** (was @nolanwaynedance). Updated every link, the footer, and the `sameAs` schema on all three pages, plus `social-captions.md` and CLAUDE.md. Still carrying the old handle: the `promo-*.jpg` cards have it burned into the artwork, and the Behold feed embed should be checked.
+
 ## 2026-09-21
 
 ### Country Noir redesign

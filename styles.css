@@ -2242,16 +2242,13 @@ html.lenis, html.lenis body { height: auto; }
 .noir-hero-content { width: 21rem; max-width: 36vw; color: var(--noir); }
 .noir-hero .hero-subtitle { color: var(--noir); margin-bottom: 1.4rem; }
 .noir-hero h1 {
-    font-size: clamp(3.4rem, 6vw, 6.5rem);
+    font-size: clamp(3rem, 5.2vw, 5.4rem);
     font-weight: 400;
-    line-height: 0.95;
+    line-height: 0.98;
     letter-spacing: -0.025em;
     color: var(--noir);
     margin-bottom: 1.6rem;
 }
-.noir-hero h1 > span:not(.visually-hidden),
-.noir-hero h1 em { display: block; }
-.noir-hero h1 em { font-style: italic; color: var(--brass-deep); }
 .noir-hero-lede {
     font-size: 1rem;
     font-weight: 400;
@@ -2290,9 +2287,7 @@ html.lenis, html.lenis body { height: auto; }
     }
     .noir-hero-content { width: 100%; max-width: 30rem; color: var(--white); }
     .noir-hero .hero-subtitle { color: var(--brass-light); margin-bottom: 0.9rem; }
-    .noir-hero h1 { font-size: clamp(2.8rem, 12vw, 4.4rem); line-height: 1; color: var(--white); margin-bottom: 1rem; }
-    .noir-hero h1 > span:not(.visually-hidden) { display: inline; }
-    .noir-hero h1 em { color: var(--brass-light); }
+    .noir-hero h1 { font-size: clamp(2.5rem, 11vw, 4rem); line-height: 1.02; color: var(--white); margin-bottom: 1rem; }
     .noir-hero-lede { color: rgba(247, 244, 238, 0.86); max-width: 22rem; margin-bottom: 1.6rem; }
     .noir-hero .hero-actions { align-items: stretch; gap: 0.6rem; }
     .noir-hero .btn { background: var(--white); color: var(--noir); border-color: var(--white); text-align: center; }
