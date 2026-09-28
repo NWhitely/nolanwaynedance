@@ -2,6 +2,10 @@
 
 All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, originally First Dance by Nolan).
 
+## 2026-09-28
+
+- **Wedding hero gained a supporting line:** "Want custom choreography, or just to feel comfortable on the floor? Start here." It speaks to both kinds of couple (the ones who want a routine and the ones who just don't want to feel awkward) without the stock "special day". Eyebrow moved to "For your wedding day" so it stops repeating "custom choreography".
+
 ## 2026-09-25
 
 ### SEO pass

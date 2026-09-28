@@ -2413,3 +2413,15 @@ html.lenis, html.lenis body { height: auto; }
 /* Keep the home page black and white: the DWTS photo is grayscale until hovered */
 .dwts-media img { filter: grayscale(100%); transition: transform 1.3s var(--ease), filter 0.6s var(--ease); }
 .dwts-card:hover .dwts-media img { filter: none; }
+
+/* Supporting line under a cinema hero headline (weddings) */
+.hero-cinema .hero-lede {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(247, 244, 238, 0.85);
+    max-width: 30rem;
+    margin: 0 0 2.25rem;
+}
+@media (max-width: 860px) {
+    .hero-cinema .hero-lede { margin-inline: auto; }
+}
