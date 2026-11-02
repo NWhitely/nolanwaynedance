@@ -1,75 +1,81 @@
-# Nolan Wayne Dance — project notes
+# Nolan Wayne Dance
 
-Brand: **Nolan Wayne Dance** (nolanwaynedance.com, @n.wayne_). Formerly
-"Dance by Nolan" / dancebynolan.com, which now 301-forwards here. The instructor goes
-by **Nolan Wayne** across both dance and founder work (one public persona); legal name
-Nolan Whitely is kept off the public site. No public email is shown on the site or in
-graphics: the contact form (Web3Forms) is the only contact path.
+Dance instruction and wedding first-dance choreography in Austin, TX. Owner and instructor:
+Nolan Wayne. The site is also the portfolio piece for Nolan's dev business, **Wayne Studios**
+(https://waynestudios.dev), so it has to be flawless and feel premium.
 
-Single-page-per-section marketing site for **Nolan Wayne Dance**, a dance instruction
-and wedding first-dance choreography business in Austin, TX. Owner/instructor: Nolan
-Wayne (legal name Nolan Whitely).
+## Brand facts
 
-- Static site, plain HTML/CSS/JS. No build step. Hosted on a custom domain (see `CNAME`).
-- Pages: `index.html` (home, split hero), `weddings.html` (weddings),
-  `lessons.html` (dance lessons). Shared `styles.css` and `main.js`.
-- Contact forms use **Web3Forms** (delivered to the owner's inbox; the receiving
-  address is configured in Web3Forms via `access_key`, not shown on the site).
+- **Nolan Wayne Dance**, nolanwaynedance.com, Instagram **@n.wayne_** (since 2026-09-25).
+  Rebranded June 2026 from Dance by Nolan / dancebynolan.com, which 301-forwards here.
+- One public persona, "Nolan Wayne," across dance and founder work. Legal name Nolan Whitely
+  stays off anything public.
+- No public email anywhere. The Web3Forms contact form is the only contact path (receiving
+  address is set in Web3Forms via `access_key`).
+- Bio facts (Nolan's wording, Home page "Meet Nolan"): 16+ years dancing; Ballroom
+  (International and American), Country, West Coast Swing; musical theatre as a kid;
+  Ballroom in college; Master-qualified on the UCWDC circuit; currently competing in WCS;
+  DWTS Austin raises close to $3 million each year.
+- Results: 1st place Advanced Two-Step Jack & Jill (with Em Andrews, @emyandrews) and
+  Strictly (with Kristina "Zaza" Casazza, @littlekzaza), Ask Me To Dance Wild West
+  Competition, Cedar Park TX, 2026-06-12. Country Swing Finals at Forever Country (Dallas).
+  UCWDC Worlds.
+
+## Positioning and offer
+
+- **Target the empty pond:** people who don't dance yet but have a reason to start
+  (wedding, partner, nights out, bucket list). Who pays: older adults, wedding couples, casual
+  social dancers. Not the competitive WCS crowd; their opinion pays nothing. Jargon like
+  "UCWDC" is quiet proof, never the hook.
+- **Rate:** $120 / hr (changed 2026-11-02 from $90 / 45 min).
+- **The hook is free:** Lessons and Home lead with a free 15-min intro lesson. Weddings lead
+  with a free 15-min consultation (a call, or a mini lesson). Forms do not ask lesson-or-call.
+- **Promo cards** (`promo-*.jpg`, built by `make_promo_cards.py`; regenerate, never hand-edit):
+  show "Book a FREE Introductory Lesson"; keep the price and any dated promo off the art.
+  Fine for Instagram, Facebook feed and the website, with captions in `social-captions.md`.
+- **Facebook Marketplace is different:** no branded card, no URL or @handle, no "Free"/$0.
+  Those trip the off-platform-ad filter and the listing gets pulled in 24-48h (2026-06-30).
+  Use a real undesigned photo, the real rate in the price field, plain text, contact kept
+  on-platform. See `marketplace-listing-wedding.md`.
+- **Audience priority** for the site: dance clients, then businesses (potential Wayne Studios
+  clients), then developer peers. Taste: many small premium touches, not gimmicks (a
+  count-along beat widget was rejected as cheap). Booking conversion comes first.
+
+## Site and hosting
+
+- Static site, plain HTML/CSS/JS, no build step. Pages: `index.html` (Home), `weddings.html`,
+  `lessons.html`, `404.html`; shared `styles.css` and `main.js`.
+- Clean URLs: `/`, `/weddings`, `/lessons` (Vercel `cleanUrls`; old `.html` and
+  `/wedding-services` addresses redirect permanently). Internal links use the clean form.
+- **Workflow: test before live.** Work on the `testing` branch and push. Vercel (team
+  waynestudios, project `nolanwaynedance`) deploys it to **test.nolanwaynedance.com**
+  (behind Vercel login, noindex). Merge to `main` only when Nolan approves.
+- **Live** is still GitHub Pages from `main` (repo `NWhitely/nolanwaynedance`, public;
+  `_config.yml` keeps notes and scripts off the site). Planned: move the live domain to
+  Vercel, then make the repo private. DNS is at GoDaddy; Nolan adds records.
+- `.gitignore` ignores raw `*.MP4`; web videos in `assets/*.mp4` are explicitly un-ignored.
+- `CHANGELOG.md` records every notable change.
 
 ---
 
-# Writing voice: READ THIS BEFORE WRITING ANY COPY
+# Site copy
 
-**Nolan's voice is confident, masculine, analytical, succinct.** How it's said is part of
-the sell. Every line should sound like an expert stating how it works, not a friendly
-brand reassuring you. Applies to all site copy: headlines, FAQs, pricing, forms, buttons,
-captions. Also applies when only "fixing grammar": fix it into this voice.
+Nolan's voice and the banned-words list are in the global CLAUDE.md. For this site:
 
-## The voice
-
-- **Short declarative sentences.** Lead with the answer. "Yes." "Common." "Almost any."
-- **Authority, not reassurance.** State the fact and the method. "I break every move into
-  small steps and build from there." Not "and that's fine", "no worries", "don't stress".
-- **Analytical.** Give the reason or mechanism: "The tempo and structure of the song decide
-  the style, and I match the dance to it."
-- **Succinct.** Cut every word that doesn't add information. No filler, no padding.
-- **First person, direct.** "I build", "I've never had a couple who couldn't do it."
-- **Concrete over abstract.** "Classic country", "a two-step to your song", not "a moment".
-- The beginner angle stays the core pitch, but it's stated with confidence ("Most of my
-  couples start with zero experience"), never softened or coddled.
-
-## Rejected (do not write like this)
-
-These were tried and rejected on 2026-11-02:
-
-- Flowery / polished: "a few extra flourishes", "plays to both of your strengths",
-  "fits your vibe", "'80s power ballads", "comfortable dancing together".
-- Casual / soft: "Happens a lot.", "You'll both look good.", "that's fine",
-  "Some songs are easier to dance to than others".
-
-Approved example:
-> Common. I build the routine around both of you. The stronger dancer gets more to do, the
-> other gets moves they can execute with confidence. On the floor, the gap won't show.
-
-## Banned words and phrases
-
-These read as AI. Avoid them entirely:
-
-- **actually** (e.g. "you'll actually enjoy it"), a dead giveaway
-- **perfectly / perfect** as filler ("perfectly crafted", "the perfect moment")
-- **crafted / craft**
-- **unforgettable**, **magical**, **magic**
-- **seamless / seamlessly**, **elevate**, **curate / curated**
-- **journey** ("your dance journey")
-- **mission** ("made it my mission"), **passion for** ("a passion for helping...")
-- **tailored** (overused; "built around" / "based on" is fine)
-- **nestled**, **dive in**, **unleash**, **transform** (as marketing puffery)
-- **vibe**, **flourish**
-- **whatever your X**, "whether you're X or Y" as a formula
-- "It's not just X, it's Y" constructions
-- **rule-of-three triads**: "fun, stress-free, and completely tailored" /
-  "your timeline, budget, and goals". One or two items, not a polished list of three.
-- **Em dashes and en dashes.** Use a period, comma, colon or parentheses.
+- Applies to all copy: headlines, FAQs, pricing, forms, buttons, captions. A grammar fix is
+  also fixed into the voice.
+- Sound like an expert stating how it works: "Yes." "Common." "Almost any." Then the method or
+  reason ("The tempo and structure of the song decide the style, and I match the dance to it.").
+- Concrete dance terms over abstractions: "classic country", "a two-step to your song".
+- The beginner angle is the core pitch, stated with confidence ("Most of my couples start with
+  zero experience"), never coddled.
+- Rejected on 2026-11-02, don't repeat: "a few extra flourishes", "plays to both of your
+  strengths", "fits your vibe", "'80s power ballads", "comfortable dancing together"; and the
+  soft versions "Happens a lot.", "You'll both look good.", "that's fine". Also avoid "actually",
+  "perfect" as filler, "mission", "passion for", "tailored", "whatever your X".
+- Approved example:
+  > Common. I build the routine around both of you. The stronger dancer gets more to do, the
+  > other gets moves they can execute with confidence. On the floor, the gap won't show.
 
 ## Credibility lines
 
@@ -87,13 +93,11 @@ These read as AI. Avoid them entirely:
   ("anxiety dreams terrified", "ran through the dip 50 times"). Casual words are fine
   *inside a quote*; the voice rules apply only to Nolan's own copy.
 
-(Nolan texts casually and in lowercase. That is not the site voice.)
-
 ---
 
-# Local preview & screenshots (how to "view" the rendered site)
+# Local preview and screenshots
 
-Claude can't watch a live browser window — it "sees" the site by rendering it in
+Claude can't watch a live browser window. It "sees" the site by rendering it in
 **headless Chromium (Playwright)** and capturing screenshots, then reading the PNGs.
 "Take a screenshot" = "look at the page via the Chromium we set up." There is no live feed.
 
@@ -121,6 +125,7 @@ await p.waitForTimeout(900);
 await p.screenshot({ path:'shots/out.png', fullPage:true });
 await b.close();
 ```
+Locally, use the `.html` file names (the Python server has no clean URLs).
 Then **Read** the PNG to view it. Useful flags:
 - Light/dark: `colorScheme:'light'|'dark'`. Mobile: `viewport:{width:390,height:844}, deviceScaleFactor:2, isMobile:true`.
 - Full-page LAYOUT check: inject `addStyleTag({content:'.reveal,.fade-in,.fade-in-stagger>*{opacity:1!important;transform:none!important}'})` so below-fold reveal content shows.
