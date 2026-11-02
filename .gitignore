@@ -6,3 +6,6 @@ assets/*.png
 /_masters/
 **/.DS_Store
 .vercel
+
+# Web-optimized videos the site uses (the *.MP4 rule above also matches .mp4 on macOS)
+!assets/*.mp4
