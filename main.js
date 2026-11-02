@@ -322,23 +322,6 @@ document.querySelectorAll('.reviews-more').forEach((btn) => {
         });
     }
 
-    // Photo and video frames open like a curtain the first time they scroll into view.
-    if (!reduce && hasIO) {
-        const frames = document.querySelectorAll('.about-image, .dwts-media, .video-frame');
-        // Observe the parent: a clipped element reports itself as invisible to the observer.
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach((e) => {
-                if (e.isIntersecting) { e.target._curtain.classList.add('is-in'); io.unobserve(e.target); }
-            });
-        }, { threshold: 0, rootMargin: '0px 0px -15% 0px' });
-        frames.forEach((f) => {
-            // Skip anything already on screen at load, so nothing flashes in late.
-            if (!f.parentElement || f.getBoundingClientRect().top < window.innerHeight * 0.9) return;
-            f.classList.add('curtain');
-            f.parentElement._curtain = f;
-            io.observe(f.parentElement);
-        });
-    }
 
     // Cards: a soft light follows the cursor (desktop only).
     if (finePointer) {

@@ -2509,7 +2509,7 @@ html.lenis, html.lenis body { height: auto; }
 .form-group .consult-option input { width: auto; padding: 0; margin: 0; accent-color: var(--brass); }
 
 /* ==========================================================================
-   PREMIUM POLISH: page transitions, buttons, headline reveals, media curtains,
+   PREMIUM POLISH: page transitions, buttons, headline reveals,
    card spotlight, price count, footer credit, easter egg.
    Every effect is enhancement only: without JS (or with reduced motion) the
    page renders exactly as before.
@@ -2548,12 +2548,6 @@ html.lenis, html.lenis body { height: auto; }
 .split-word { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: 0.12em; margin-bottom: -0.12em; }
 .split-word > span { display: inline-block; transform: translateY(108%); transition: transform 1.15s var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
 .is-split.visible .split-word > span, .visible .is-split .split-word > span { transform: none; }
-
-/* Photos and video frames open like a curtain, settling from a slight zoom */
-.curtain { clip-path: inset(100% 0 0 0); transition: clip-path 1.5s var(--ease); }
-.curtain img { transform: scale(1.12); transition: transform 1.9s var(--ease); }
-.curtain.is-in { clip-path: inset(-120px -120px -120px -120px); }
-.curtain.is-in img { transform: scale(1); }
 
 /* Cards: a soft brass light follows the cursor */
 .spot { position: relative; }
@@ -2602,8 +2596,6 @@ html.lenis, html.lenis body { height: auto; }
     .btn, .btn:hover { transform: none; }
     .btn::after { display: none; }
     .split-word > span { transform: none; transition: none; }
-    .curtain { clip-path: none; transition: none; }
-    .curtain img { transform: none; transition: none; }
 }
 
 /* First dance planner (weddings page) */
