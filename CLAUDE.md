@@ -64,7 +64,7 @@ Nolan Wayne. The site is also the portfolio piece for Nolan's dev business, **Wa
   `[data-count]` section) runs down the margin on the section's `data-side` and crosses between
   sections, drawing with scroll. New sections need `data-count` and alternating `data-side`.
 - Section headers are counts: `.count` numeral plus `h2`; right-side sections use `.sec-head.is-right`.
-  "How it works" is a 5-8 count-in.
+  "How it works" steps are numbered 1-4 (a 5-8 count-in was tried; too obscure for beginners).
 - Kept from the original site: noir default with brass/gold accents (`--accent`), Nolan's portrait as
   the home hero (photo drifts, headline fades on scroll), grayscale photos that turn to color on hover,
   fade-in reveals. Light mode is opt-in via the toggle.
