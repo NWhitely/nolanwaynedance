@@ -2,6 +2,18 @@
 
 All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, originally First Dance by Nolan).
 
+## 2026-11-02 (testing): full redesign
+
+Rebuilt the presentation from scratch so it reads as designed for this business, not as a template.
+- **Concept: the line of dance.** One red line travels the page like couples traveling the floor, running down the margin beside each section and crossing between sections. It draws as you scroll (`main.js`), with a marker at each section.
+- **Each section is a count** (big red numeral). "How it works" is a count-in: 5, 6, 7, 8.
+- **Type:** Big Shoulders Display (dance-hall signage, competition bibs), Familjen Grotesk, Newsreader italic for reviews. Fraunces/Montserrat removed from the web build (TTFs kept for the image scripts).
+- **Color:** warm paper, ink, one lacquer red. Follows the visitor's light/dark setting; the toggle still overrides.
+- **Components replaced:** card grids, star ratings, + accordions, icon trios, "starting at" boxes and device-frame video mockups are gone. Reviews are pull quotes; FAQs are an open two-column list; pricing is one line plus heat-sheet lists with dotted leaders; footage runs unframed.
+- **Removed:** GSAP, Lenis smooth scroll, button sheen/lean, word-by-word headline reveals, cursor spotlight, price count-up.
+- Home hero is now the competition dip photo; Home gains an "On the record" results list.
+- Wedding FAQ answers on lesson count, booking lead time and parent dances, and Lessons FAQ answers on partners, lesson count and location, rewritten in Nolan's voice. Testimonials unchanged, verbatim.
+
 ## 2026-11-02 (on the `testing` branch, not live yet)
 
 ### Offer and copy
