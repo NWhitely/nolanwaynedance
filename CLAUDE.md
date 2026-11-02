@@ -58,21 +58,6 @@ Nolan Wayne. The site is also the portfolio piece for Nolan's dev business, **Wa
 
 ---
 
-# Design system (redesign 2026-11-02)
-
-- **Concept: the line of dance.** A single red SVG line (`.lod`, built in `main.js` from every
-  `[data-count]` section) runs down the margin on the section's `data-side` and crosses the floor
-  between sections, drawing with scroll. New sections need `data-count` and `data-side="left|right"`,
-  alternating, with a `.sec-head` (or `[data-lod-head]`) at the top.
-- Each section header is a count: `.count` numeral plus `h2`. Right-side sections use `.sec-head.is-right`.
-- Type: Big Shoulders Display (`--display`), Familjen Grotesk (`--text`), Newsreader italic
-  (`--quote`, reviews only). Self-hosted in `fonts/`.
-- Color: `--paper`, `--ink`, one `--red`. Light and dark both defined; default follows the system.
-- Components: `.sheet` heat-sheet lists (dotted leaders), `.countin` (5-8), `.quote` pull quotes,
-  `.qa` open FAQ, `.rate`, `.footage` (no device frames), `.album`.
-- Don't reintroduce: card grids, star ratings, accordions, icon trios, gold-on-black, sheen or
-  magnetic buttons, word-split headline reveals, cursor spotlights, smooth-scroll libraries.
-
 # Site copy
 
 Nolan's voice and the banned-words list are in the global CLAUDE.md. For this site:

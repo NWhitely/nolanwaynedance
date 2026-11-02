@@ -2,7 +2,10 @@
 
 All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, originally First Dance by Nolan).
 
-## 2026-11-02 (testing): full redesign
+## 2026-11-02 (testing): full redesign, then reverted
+
+Nolan preferred the original gold look. Site files restored to the pre-redesign build; the redesign is kept on branch `redesign-line-of-dance` for reference.
+
 
 Rebuilt the presentation from scratch so it reads as designed for this business, not as a template.
 - **Concept: the line of dance.** One red line travels the page like couples traveling the floor, running down the margin beside each section and crossing between sections. It draws as you scroll (`main.js`), with a marker at each section.
