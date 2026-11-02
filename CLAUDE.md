@@ -18,63 +18,76 @@ Wayne (legal name Nolan Whitely).
 
 ---
 
-# Writing voice — READ THIS BEFORE WRITING ANY COPY
+# Writing voice: READ THIS BEFORE WRITING ANY COPY
 
-The site copy must sound like a real person wrote it, not a marketing bot. Nolan can
-spot AI phrasing instantly and dislikes it. When writing or editing any user-facing
-text, run it against this list first.
+**Nolan's voice is confident, masculine, analytical, succinct.** How it's said is part of
+the sell. Every line should sound like an expert stating how it works, not a friendly
+brand reassuring you. Applies to all site copy: headlines, FAQs, pricing, forms, buttons,
+captions. Also applies when only "fixing grammar": fix it into this voice.
 
-## Banned words and phrases (do not use in copy)
+## The voice
+
+- **Short declarative sentences.** Lead with the answer. "Yes." "Common." "Almost any."
+- **Authority, not reassurance.** State the fact and the method. "I break every move into
+  small steps and build from there." Not "and that's fine", "no worries", "don't stress".
+- **Analytical.** Give the reason or mechanism: "The tempo and structure of the song decide
+  the style, and I match the dance to it."
+- **Succinct.** Cut every word that doesn't add information. No filler, no padding.
+- **First person, direct.** "I build", "I've never had a couple who couldn't do it."
+- **Concrete over abstract.** "Classic country", "a two-step to your song", not "a moment".
+- The beginner angle stays the core pitch, but it's stated with confidence ("Most of my
+  couples start with zero experience"), never softened or coddled.
+
+## Rejected (do not write like this)
+
+These were tried and rejected on 2026-11-02:
+
+- Flowery / polished: "a few extra flourishes", "plays to both of your strengths",
+  "fits your vibe", "'80s power ballads", "comfortable dancing together".
+- Casual / soft: "Happens a lot.", "You'll both look good.", "that's fine",
+  "Some songs are easier to dance to than others".
+
+Approved example:
+> Common. I build the routine around both of you. The stronger dancer gets more to do, the
+> other gets moves they can execute with confidence. On the floor, the gap won't show.
+
+## Banned words and phrases
 
 These read as AI. Avoid them entirely:
 
-- **actually** (e.g. "you'll actually enjoy it") — overused, dead giveaway
+- **actually** (e.g. "you'll actually enjoy it"), a dead giveaway
 - **perfectly / perfect** as filler ("perfectly crafted", "the perfect moment")
 - **crafted / craft**
 - **unforgettable**, **magical**, **magic**
 - **seamless / seamlessly**, **elevate**, **curate / curated**
 - **journey** ("your dance journey")
-- **mission** ("made it my mission"), **passion for** ("a passion for helping…")
+- **mission** ("made it my mission"), **passion for** ("a passion for helping...")
 - **tailored** (overused; "built around" / "based on" is fine)
 - **nestled**, **dive in**, **unleash**, **transform** (as marketing puffery)
+- **vibe**, **flourish**
 - **whatever your X**, "whether you're X or Y" as a formula
 - "It's not just X, it's Y" constructions
 - **rule-of-three triads**: "fun, stress-free, and completely tailored" /
   "your timeline, budget, and goals". One or two items, not a polished list of three.
+- **Em dashes and en dashes.** Use a period, comma, colon or parentheses.
 
-## Do this instead
+## Credibility lines
 
-- Short, plain sentences. First person ("I teach…", "I'll build…"), warm but not gushy.
-- Concrete over abstract: "a country two-step to your song" beats "a magical moment".
-- A little looseness is good: contractions, the occasional fragment, a real aside in
-  parentheses. It should sound spoken, not brochure-polished.
-- Lead with the beginner / low-pressure / no-judgment angle — that's the core pitch.
-- "As seen on Dancing with the Stars Austin" is a fine credibility line **on the website**,
-  where there's room to explain it (it's a Center for Child Protection charity fundraiser
-  that's raised $2M+/yr, not the TV show). Keep it OFF standalone marketplace cards/graphics:
-  with no context a stranger reads it as the TV show and feels misled. On cards, use proof
-  tied to the piece instead (e.g. a competition result + event, "16+ years teaching").
+- "As seen on Dancing with the Stars Austin" is fine **on the website**, where there's room
+  to explain it (a Center for Child Protection charity fundraiser that raises close to
+  $3M each year, not the TV show). Keep it OFF standalone marketplace cards/graphics: with
+  no context a stranger reads it as the TV show and feels misled. On cards, use proof tied
+  to the piece instead (e.g. a competition result + event, "16+ years teaching").
+- The "As Featured In" strip (DWTS Austin, The Knot, WeddingWire, Brides of Austin) is
+  confirmed real. Leave it.
 
 ## Leave alone
 
-- **Testimonial quotes** — they're meant to sound like different real people
-  ("anxiety dreams terrified", "ran through the dip 50 times"). Casual words like
-  "actually fun" are fine *inside a quote*; only avoid them in Nolan's own copy.
+- **Testimonial quotes.** They're meant to sound like different real people
+  ("anxiety dreams terrified", "ran through the dip 50 times"). Casual words are fine
+  *inside a quote*; the voice rules apply only to Nolan's own copy.
 
-## Nolan's own voice (mirror this)
-
-Site copy voice (Nolan, 2026-11-02): **confident, masculine, analytical, succinct.**
-How it's said is part of the sell. State things plainly and with authority: short
-declarative sentences, concrete reasons, no hedging, no softeners ("that's fine",
-"happens a lot", "you'll both look good"), no flowery words ("flourishes", "vibe",
-"plays to your strengths"). Example: "Common. I build the routine around both of you.
-The stronger dancer gets more to do. On the floor, the gap won't show."
-
-(His texting style is casual and lowercase, but that's not the site voice.)
-
-> **Writing samples go here.** Nolan to paste a few real samples (texts, captions,
-> emails). Until then, mirror the tone above. Once samples exist, update this section
-> with the specific patterns (sentence length, punctuation, recurring words).
+(Nolan texts casually and in lowercase. That is not the site voice.)
 
 ---
 
