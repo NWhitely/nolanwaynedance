@@ -190,6 +190,15 @@
         build();
     }
 
+    /* ---------- Black-and-white photos fade to color once they're well into view (works on phones too) ---------- */
+    const bw = document.querySelectorAll('.feature-photo, .bio-photo');
+    if (bw.length && 'IntersectionObserver' in window) {
+        const cio = new IntersectionObserver((entries) => {
+            entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in-color'); cio.unobserve(e.target); } });
+        }, { threshold: 0.6 });
+        bw.forEach((el) => cio.observe(el));
+    }
+
     /* ---------- Autoplaying videos pause while off screen ---------- */
     if ('IntersectionObserver' in window) {
         const vio = new IntersectionObserver((entries) => {
