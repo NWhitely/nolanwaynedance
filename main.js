@@ -121,7 +121,7 @@ document.querySelectorAll('form.web3-form').forEach(form => {
         } catch (err) {
             if (result) {
                 result.className = 'form-result error';
-                result.innerHTML = 'Something went wrong. Please try again, or email me directly at <a href="mailto:whitely.nolan@gmail.com">whitely.nolan@gmail.com</a>.';
+                result.innerHTML = 'Something went wrong. Please try again in a minute, or message me on Instagram at <a href="https://instagram.com/n.wayne_" target="_blank" rel="noopener">@n.wayne_</a>.';
             }
         } finally {
             if (submitBtn) {
@@ -299,3 +299,213 @@ document.querySelectorAll('.reviews-more').forEach((btn) => {
         }
     });
 });
+
+/* ==========================================================================
+   Premium polish (enhancement only; nothing here is needed to use the site)
+   ========================================================================== */
+(function () {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    const hasIO = 'IntersectionObserver' in window;
+
+    // Section headlines: wrap each word so it can rise from behind a mask.
+    // The parent .section-header already gets .visible from the fade-in observer.
+    if (!reduce && hasIO) {
+        document.querySelectorAll('.section-header h2').forEach((h) => {
+            if (h.children.length) return; // only plain-text headlines
+            const text = h.textContent.trim();
+            h.setAttribute('aria-label', text);
+            h.innerHTML = text.split(/\s+/).map((w, i) =>
+                '<span class="split-word" aria-hidden="true"><span style="--i:' + i + '">' + w + '</span></span>'
+            ).join(' ');
+            h.classList.add('is-split');
+        });
+    }
+
+    // Photo and video frames open like a curtain the first time they scroll into view.
+    if (!reduce && hasIO) {
+        const frames = document.querySelectorAll('.about-image, .dwts-media, .video-frame');
+        // Observe the parent: a clipped element reports itself as invisible to the observer.
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) { e.target._curtain.classList.add('is-in'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0, rootMargin: '0px 0px -15% 0px' });
+        frames.forEach((f) => {
+            // Skip anything already on screen at load, so nothing flashes in late.
+            if (!f.parentElement || f.getBoundingClientRect().top < window.innerHeight * 0.9) return;
+            f.classList.add('curtain');
+            f.parentElement._curtain = f;
+            io.observe(f.parentElement);
+        });
+    }
+
+    // Cards: a soft light follows the cursor (desktop only).
+    if (finePointer) {
+        document.querySelectorAll('.testimonial, .format, .step, .genre-card, .path-card').forEach((card) => {
+            card.classList.add('spot');
+            card.addEventListener('pointermove', (e) => {
+                const r = card.getBoundingClientRect();
+                card.style.setProperty('--px', (e.clientX - r.left) + 'px');
+                card.style.setProperty('--py', (e.clientY - r.top) + 'px');
+            });
+        });
+    }
+
+    // Buttons lean a few pixels toward the cursor (desktop only).
+    if (finePointer && !reduce) {
+        document.querySelectorAll('.btn').forEach((btn) => {
+            btn.addEventListener('pointermove', (e) => {
+                const r = btn.getBoundingClientRect();
+                const x = (e.clientX - r.left - r.width / 2) / (r.width / 2);
+                const y = (e.clientY - r.top - r.height / 2) / (r.height / 2);
+                btn.style.setProperty('--mx', (x * 5).toFixed(2) + 'px');
+                btn.style.setProperty('--my', (y * 4).toFixed(2) + 'px');
+            });
+            btn.addEventListener('pointerleave', () => {
+                btn.style.setProperty('--mx', '0px');
+                btn.style.setProperty('--my', '0px');
+            });
+        });
+    }
+
+    // Price counts up once when it scrolls into view.
+    if (!reduce && hasIO) {
+        document.querySelectorAll('.price-display').forEach((el) => {
+            const node = el.firstChild;
+            if (!node || node.nodeType !== 3) return;
+            const m = node.textContent.match(/^(\s*\$)(\d+)(.*)$/s);
+            if (!m) return;
+            const target = parseInt(m[2], 10);
+            const io = new IntersectionObserver((entries) => {
+                if (!entries[0].isIntersecting) return;
+                io.disconnect();
+                const start = performance.now(), dur = 1400;
+                const tick = (t) => {
+                    const p = Math.min(1, (t - start) / dur);
+                    const eased = 1 - Math.pow(1 - p, 4);
+                    node.textContent = m[1] + Math.round(target * eased) + m[3];
+                    if (p < 1) requestAnimationFrame(tick);
+                };
+                node.textContent = m[1] + '0' + m[3];
+                requestAnimationFrame(tick);
+            }, { threshold: 0.6 });
+            io.observe(el);
+        });
+    }
+
+    // Autoplaying hero videos pause while off screen (saves battery and CPU).
+    if (hasIO) {
+        const vio = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                const v = e.target;
+                if (e.isIntersecting) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+                else v.pause();
+            });
+        });
+        document.querySelectorAll('video[autoplay]').forEach((v) => vio.observe(v));
+    }
+
+    // For the developers who open the console.
+    try {
+        console.log(
+            '%cNolan Wayne Dance%c\nDesigned and built by hand by Wayne Studios.\nWant a site like this? https://waynestudios.dev',
+            'font: 600 20px Georgia, serif; color: #d6bb8c; padding: 6px 0;',
+            'font: 12px/1.6 system-ui, sans-serif; color: #a39b91;'
+        );
+    } catch (e) {}
+
+    // Easter egg: up, up, down, down, left, right, left, right, B, A.
+    const code = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+    let pos = 0;
+    document.addEventListener('keydown', (e) => {
+        const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+        pos = (k === code[pos]) ? pos + 1 : (k === code[0] ? 1 : 0);
+        if (pos < code.length) return;
+        pos = 0;
+        document.body.classList.remove('two-stepping');
+        void document.body.offsetWidth;
+        document.body.classList.add('two-stepping');
+        let toast = document.querySelector('.egg-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.className = 'egg-toast';
+            toast.setAttribute('role', 'status');
+            toast.innerHTML = 'Quick, quick, slow, slow. Site by <a href="https://waynestudios.dev" target="_blank" rel="noopener">Wayne Studios</a>.';
+            document.body.appendChild(toast);
+        }
+        requestAnimationFrame(() => toast.classList.add('show'));
+        clearTimeout(toast._t);
+        toast._t = setTimeout(() => toast.classList.remove('show'), 4200);
+    });
+})();
+
+/* ==========================================================================
+   First dance planner (weddings page): pick a date, see when to start.
+   Plan: consultation a week before the first lesson, first lesson about
+   10 weeks out (the FAQ says 2-3 months), final run-through a week before.
+   ========================================================================== */
+(function () {
+    const input = document.getElementById('plannerDate');
+    if (!input) return;
+    const result = input.closest('.planner-card').querySelector('.planner-result');
+    const note = result.querySelector('.planner-note');
+    const cta = result.querySelector('.planner-cta');
+    const DAY = 86400000;
+    const fmt = (d, year) => d.toLocaleDateString('en-US', year
+        ? { month: 'short', day: 'numeric', year: 'numeric' }
+        : { weekday: 'short', month: 'short', day: 'numeric' });
+    const set = (k, v) => { result.querySelector('[data-step="' + k + '"]').textContent = v; };
+
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    input.min = new Date(today.getTime() + DAY).toISOString().slice(0, 10);
+
+    let chosen = null;
+    input.addEventListener('change', () => {
+        const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(input.value);
+        if (!m) return;
+        const wedding = new Date(+m[1], +m[2] - 1, +m[3]);
+        const days = Math.round((wedding - today) / DAY);
+        chosen = wedding;
+
+        result.hidden = false;
+        result.classList.remove('show');
+        void result.offsetWidth;
+
+        if (days <= 0) {
+            note.textContent = "That date has already passed. Pick an upcoming one.";
+            ['consult', 'start', 'final', 'day'].forEach((k) => set(k, '-'));
+            requestAnimationFrame(() => result.classList.add('show'));
+            return;
+        }
+
+        const start = new Date(wedding.getTime() - 70 * DAY);
+        const consult = new Date(start.getTime() - 7 * DAY);
+        const final = new Date(wedding.getTime() - 7 * DAY);
+        set('day', fmt(wedding, true));
+        set('final', days > 10 ? fmt(final) : 'Day before');
+
+        if (days < 21) {
+            set('consult', 'Today');
+            set('start', 'This week');
+            note.textContent = "That's close, but I've done it. We'll keep the dance simple and go straight to the parts that matter. Reach out today.";
+        } else if (consult <= today) {
+            set('consult', 'This week');
+            set('start', 'Next week');
+            note.textContent = "You're inside the ideal window, so let's get started soon. Most couples need 4-6 lessons.";
+        } else {
+            set('consult', fmt(consult));
+            set('start', fmt(start));
+            note.textContent = "Plenty of time. Booking early gets you the lesson times you want.";
+        }
+        requestAnimationFrame(() => result.classList.add('show'));
+    });
+
+    // Carry the date into the contact form so they don't type it twice.
+    cta.addEventListener('click', () => {
+        const field = document.querySelector('#contact input[name="wedding_date"]');
+        if (field && chosen && !field.value) {
+            field.value = chosen.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+        }
+    });
+})();

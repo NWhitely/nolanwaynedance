@@ -2,6 +2,28 @@
 
 All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, originally First Dance by Nolan).
 
+## 2026-11-02 (on the `testing` branch, not live yet)
+
+### Offer and copy
+- **Free first step is now the main call to action.** Lessons and Home lead with a free 15-min intro lesson (or a quick call); Weddings lead with a free 15-min consultation (a call, or a mini lesson). Hero buttons, pricing boxes, contact intros, form options, success messages and Web3Forms subject lines all follow the split, so inquiries arrive tagged by page and by choice.
+- **Pricing** shown as $120 / hr (was $90 / 45 min); schema `priceRange` is now "$120".
+- Lessons: competition partner credits with Instagram links, video labels "Finals" and "Worlds", section intro "The same social dances I teach, taken to a competitive level."
+- Home bio paragraph reworded; bio says "each year".
+- Form error message no longer shows a personal email; it points to Instagram instead.
+
+### Premium polish
+- Page-to-page transitions (View Transitions API; browsers without it just navigate).
+- Buttons: brass sheen on hover and a few pixels of lean toward the cursor (desktop only).
+- Section headlines rise word by word; photos open like a curtain on first view; the price counts up once.
+- Cards carry a soft brass light that follows the cursor (desktop only).
+- Autoplaying hero videos pause while off screen.
+- **First dance planner** on Weddings: pick a date, see consultation / first lesson / final run-through dates; the date carries into the contact form.
+- "Site by Wayne Studios" footer credit, a console note for developers, and a Konami-code easter egg (the logo two-steps).
+- Everything respects reduced-motion settings and is enhancement only.
+
+### Testing site
+- `_tools/deploy-testing.sh` publishes the current branch to testing.nolanwaynedance.com (separate GitHub Pages repo, noindex, "TESTING" ribbon). The live site still deploys only from `main`.
+
 ## 2026-09-28
 
 - **Wedding hero gained a supporting line:** "Want custom choreography, or just to feel comfortable on the floor? Start here." It speaks to both kinds of couple (the ones who want a routine and the ones who just don't want to feel awkward) without the stock "special day". Eyebrow moved to "For your wedding day" so it stops repeating "custom choreography".

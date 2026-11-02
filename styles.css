@@ -2507,3 +2507,158 @@ html.lenis, html.lenis body { height: auto; }
 }
 .form-group label.consult-option:has(input:checked) { border-color: var(--brass); }
 .form-group .consult-option input { width: auto; padding: 0; margin: 0; accent-color: var(--brass); }
+
+/* ==========================================================================
+   PREMIUM POLISH: page transitions, buttons, headline reveals, media curtains,
+   card spotlight, price count, footer credit, easter egg.
+   Every effect is enhancement only: without JS (or with reduced motion) the
+   page renders exactly as before.
+   ========================================================================== */
+
+/* Page-to-page transitions (Chrome, Edge, Safari 18.2+; others just navigate) */
+@view-transition { navigation: auto; }
+#navbar { view-transition-name: site-nav; }
+::view-transition-old(root) { animation: vt-out .32s cubic-bezier(.4, 0, 1, 1) both; }
+::view-transition-new(root) { animation: vt-in .7s var(--ease) both; }
+@keyframes vt-out { to { opacity: 0; transform: translateY(-10px); filter: blur(6px); } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(14px); filter: blur(8px); } }
+
+/* Buttons: a slow brass sheen crosses on hover, and the button leans toward the cursor */
+.btn {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    transform: translate3d(var(--mx, 0px), var(--my, 0px), 0);
+    transition: background 0.45s var(--ease), color 0.45s var(--ease), border-color 0.45s var(--ease), transform 0.6s var(--ease);
+}
+.btn:hover { transform: translate3d(var(--mx, 0px), var(--my, 0px), 0); }
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    background: linear-gradient(105deg, transparent 30%, rgba(214, 187, 140, 0.38) 48%, rgba(247, 244, 238, 0.18) 52%, transparent 70%);
+    transform: translateX(-130%);
+    transition: transform 1.1s var(--ease);
+    pointer-events: none;
+}
+.btn:hover::after { transform: translateX(130%); }
+
+/* Section headlines rise word by word from behind a mask */
+.split-word { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: 0.12em; margin-bottom: -0.12em; }
+.split-word > span { display: inline-block; transform: translateY(108%); transition: transform 1.15s var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
+.is-split.visible .split-word > span, .visible .is-split .split-word > span { transform: none; }
+
+/* Photos and video frames open like a curtain, settling from a slight zoom */
+.curtain { clip-path: inset(100% 0 0 0); transition: clip-path 1.5s var(--ease); }
+.curtain img { transform: scale(1.12); transition: transform 1.9s var(--ease); }
+.curtain.is-in { clip-path: inset(-120px -120px -120px -120px); }
+.curtain.is-in img { transform: scale(1); }
+
+/* Cards: a soft brass light follows the cursor */
+.spot { position: relative; }
+.spot::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(420px circle at var(--px, 50%) var(--py, 50%), rgba(214, 187, 140, 0.10), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.6s var(--ease);
+}
+.spot:hover::after { opacity: 1; }
+.testimonial:hover { transform: none; box-shadow: none; }
+
+/* Price counts up once; tabular figures keep the width steady while it counts */
+.price-display { font-variant-numeric: tabular-nums lining-nums; }
+
+/* Footer credit */
+.site-credit { margin-top: .75rem; font-size: .72rem; letter-spacing: .08em; color: var(--text-light); }
+.site-credit a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--hairline-strong); padding-bottom: 1px; transition: color .4s var(--ease), border-color .4s var(--ease); }
+.site-credit a:hover { color: var(--brass-light); border-color: var(--brass); }
+
+/* Easter egg: the logo does a two-step */
+@keyframes two-step {
+    0%, 100% { transform: translateX(0) rotate(0); }
+    12% { transform: translateX(6px) rotate(4deg); }
+    25% { transform: translateX(12px) rotate(0); }
+    50% { transform: translateX(12px) rotate(-4deg); }
+    62% { transform: translateX(6px) rotate(0); }
+    75% { transform: translateX(0) rotate(4deg); }
+}
+.two-stepping .logo-mark { animation: two-step 0.9s var(--ease) 3; }
+.egg-toast {
+    position: fixed; left: 50%; bottom: 28px; z-index: 9999;
+    transform: translate(-50%, 20px); opacity: 0;
+    padding: .85rem 1.3rem; background: var(--noir); color: var(--bone);
+    border: 1px solid var(--brass); font-family: var(--sans); font-size: .78rem; letter-spacing: .06em;
+    transition: opacity .5s var(--ease), transform .5s var(--ease);
+}
+.egg-toast.show { opacity: 1; transform: translate(-50%, 0); }
+.egg-toast a { color: var(--brass-light); }
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+    .btn, .btn:hover { transform: none; }
+    .btn::after { display: none; }
+    .split-word > span { transform: none; transition: none; }
+    .curtain { clip-path: none; transition: none; }
+    .curtain img { transform: none; transition: none; }
+}
+
+/* First dance planner (weddings page) */
+.planner { padding: 0 0 clamp(4rem, 9vh, 7rem); }
+.planner-card {
+    max-width: 760px; margin: 0 auto; text-align: center;
+    padding: clamp(2.25rem, 5vw, 3.5rem) clamp(1.25rem, 5vw, 3.5rem);
+    border: 1px solid var(--hairline-strong);
+}
+.planner-eyebrow { font-family: var(--sans); text-transform: uppercase; letter-spacing: .28em; font-size: .68rem; color: var(--brass); margin-bottom: .75rem; }
+.planner-card h3 { font-family: var(--display); font-size: clamp(1.7rem, 3.5vw, 2.3rem); font-weight: 400; margin-bottom: .5rem; }
+.planner-sub { color: var(--text-light); margin-bottom: 1.75rem; }
+.planner-input {
+    font-family: var(--sans); font-size: 1rem; color: var(--text);
+    background: var(--surface); border: 1px solid var(--accent);
+    padding: .9rem 1.1rem; min-width: 16rem; max-width: 100%;
+    color-scheme: dark; transition: border-color .4s var(--ease);
+}
+:root[data-theme="light"] .planner-input { color-scheme: light; }
+.planner-input:focus { outline: none; border-color: var(--brass); }
+.planner-result { margin-top: 2.5rem; }
+.planner-timeline {
+    list-style: none; padding: 0; margin: 0 0 1.75rem;
+    display: grid; grid-template-columns: repeat(4, 1fr); position: relative;
+}
+.planner-timeline::before {
+    content: ""; position: absolute; top: 5px; left: 12.5%; right: 12.5%; height: 1px;
+    background: linear-gradient(90deg, var(--brass-deep), var(--brass-light));
+    transform-origin: left; transform: scaleX(0); transition: transform 1.2s var(--ease);
+}
+.planner-result.show .planner-timeline::before { transform: scaleX(1); }
+.planner-timeline li {
+    display: flex; flex-direction: column; align-items: center; gap: .35rem; position: relative;
+    padding-top: 1.6rem; opacity: 0; transform: translateY(10px);
+    transition: opacity .7s var(--ease), transform .7s var(--ease);
+}
+.planner-timeline li::before {
+    content: ""; position: absolute; top: 0; left: 50%; width: 11px; height: 11px; margin-left: -5.5px;
+    border-radius: 50%; background: var(--bg); border: 1px solid var(--brass);
+}
+.planner-timeline li:last-child::before { background: var(--brass); }
+.planner-result.show .planner-timeline li { opacity: 1; transform: none; }
+.planner-result.show .planner-timeline li:nth-child(2) { transition-delay: .15s; }
+.planner-result.show .planner-timeline li:nth-child(3) { transition-delay: .3s; }
+.planner-result.show .planner-timeline li:nth-child(4) { transition-delay: .45s; }
+.planner-when { font-family: var(--display); font-size: 1.15rem; color: var(--text); }
+.planner-what { font-family: var(--sans); font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--text-light); }
+.planner-note { color: var(--text-light); max-width: 32rem; margin: 0 auto 1.75rem; }
+@media (max-width: 640px) {
+    .planner-timeline { grid-template-columns: 1fr; text-align: left; gap: 1.25rem; padding-left: 1.75rem; }
+    .planner-timeline::before { top: 6px; bottom: 6px; left: 5px; right: auto; width: 1px; height: auto; transform-origin: top; transform: scaleY(0); background: linear-gradient(180deg, var(--brass-deep), var(--brass-light)); }
+    .planner-result.show .planner-timeline::before { transform: scaleY(1); }
+    .planner-timeline li { align-items: flex-start; padding-top: 0; }
+    .planner-timeline li::before { top: 6px; left: -1.75rem; margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .planner-timeline::before, .planner-timeline li { transition: none; }
+}

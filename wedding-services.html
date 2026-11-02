@@ -204,6 +204,29 @@
         </div>
     </section>
 
+    <!-- First dance planner -->
+    <section class="planner" id="planner">
+        <div class="container">
+            <div class="planner-card fade-in">
+                <p class="planner-eyebrow">First Dance Planner</p>
+                <h3>When's the wedding?</h3>
+                <p class="planner-sub">Pick your date and I'll show you when to start.</p>
+                <label class="visually-hidden" for="plannerDate">Wedding date</label>
+                <input type="date" id="plannerDate" class="planner-input">
+                <div class="planner-result" hidden>
+                    <ol class="planner-timeline">
+                        <li><span class="planner-when" data-step="consult"></span><span class="planner-what">Free consultation</span></li>
+                        <li><span class="planner-when" data-step="start"></span><span class="planner-what">First lesson</span></li>
+                        <li><span class="planner-when" data-step="final"></span><span class="planner-what">Final run-through</span></li>
+                        <li><span class="planner-when" data-step="day"></span><span class="planner-what">Your first dance</span></li>
+                    </ol>
+                    <p class="planner-note" aria-live="polite"></p>
+                    <a href="#contact" class="btn planner-cta">Book Your Free Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials -->
     <section class="testimonials" id="testimonials">
         <div class="container">
@@ -575,6 +598,7 @@
             <a href="https://instagram.com/n.wayne_" target="_blank" rel="noopener">Instagram</a>
         </div>
         <p>&copy; 2026 Nolan Wayne Dance. All rights reserved.</p>
+        <p class="site-credit">Site by <a href="https://waynestudios.dev" target="_blank" rel="noopener">Wayne Studios</a></p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
