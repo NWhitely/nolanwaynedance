@@ -35,7 +35,7 @@ slow dance, a country two-step, a bit of swing. Depends on the song and how far
 you want to take it. Doesn't have to be big choreography unless you want that.
 
 How it works:
-- 45 minute lessons, $90 each
+- Lessons are $120 an hour
 - In your home, at a studio, or over video
 - Austin and the surrounding area
 - 16+ years dancing, teaching and competing

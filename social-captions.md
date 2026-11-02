@@ -12,7 +12,7 @@ Pair each with its promo card (square for feed, `-9x16` for stories/reels):
 > **NOT for Facebook Marketplace.** The branded promo cards (website URL, @handle, FREE button)
 > trip Marketplace's off-platform-ad filter and get listings pulled (see CHANGELOG 2026-06-30).
 > For Marketplace, use a real un-designed photo with the plain low-flag listing in
-> `marketplace-listing-wedding.md` ($90 in the price field, no URL/handle, contact kept
+> `marketplace-listing-wedding.md` ($120 in the price field, no URL/handle, contact kept
 > on-platform). These captions and the free-intro hook are fine for **Instagram / Facebook feed
 > + the website**, just not Marketplace.
 
@@ -121,9 +121,9 @@ nolanwaynedance.com · @n.wayne_
 
 - **The hook is the free first lesson**, in the first line of every caption. For a beginner,
   "first one's free" beats any number; a no-risk first lesson is a cheap way to get a recurring
-  client in the door. Quote the $90 / 45 min rate in conversation, after they've met you.
+  client in the door. Quote the $120 / hr rate in conversation, after they've met you.
 - **Don't post a price on Instagram/Facebook posts** — the free intro is the pull. (On
-  Marketplace it's different: the real $90 goes in the price field. See
+  Marketplace it's different: the real $120 goes in the price field. See
   `marketplace-listing-wedding.md`.)
 - **The promo cards already show the FREE button**, so FREE is on the art; the dated deadline
   stays in the caption text, where you edit one line when it changes.

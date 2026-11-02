@@ -11,6 +11,11 @@ All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, o
 - Home bio paragraph reworded; bio says "each year".
 - Form error message no longer shows a personal email; it points to Instagram instead.
 
+- Meet Nolan now lives on Home only; Lessons lost its "No experience needed" eyebrow; forms no longer ask lesson-or-call.
+- Clean URLs on Vercel: `/lessons`, `/weddings` (renamed from wedding-services). Old `.html` and `/wedding-services` addresses redirect permanently.
+- Grammar pass on FAQs, pricing and contact copy; Weddings share description drops "unforgettable" and "tailored". Marketplace and caption docs now quote $120 / hr.
+- Site videos were never committed (the `*.MP4` ignore rule also matched `.mp4` on macOS), so they 404 on the GitHub Pages site; now committed.
+
 ### Premium polish
 - Page-to-page transitions (View Transitions API; browsers without it just navigate).
 - Buttons: brass sheen on hover and a few pixels of lean toward the cursor (desktop only).
