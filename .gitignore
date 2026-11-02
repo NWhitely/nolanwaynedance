@@ -5,3 +5,4 @@ assets/*.png
 *.mov
 /_masters/
 **/.DS_Store
+.vercel
