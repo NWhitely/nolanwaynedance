@@ -11,7 +11,7 @@ and wedding first-dance choreography business in Austin, TX. Owner/instructor: N
 Wayne (legal name Nolan Whitely).
 
 - Static site, plain HTML/CSS/JS. No build step. Hosted on a custom domain (see `CNAME`).
-- Pages: `index.html` (home, split hero), `wedding-services.html` (weddings),
+- Pages: `index.html` (home, split hero), `weddings.html` (weddings),
   `lessons.html` (dance lessons). Shared `styles.css` and `main.js`.
 - Contact forms use **Web3Forms** (delivered to the owner's inbox; the receiving
   address is configured in Web3Forms via `access_key`, not shown on the site).
@@ -97,7 +97,7 @@ const { chromium } = require('/tmp/nwdshot/node_modules/playwright');
 const b = await chromium.launch();
 const ctx = await b.newContext({ viewport:{width:1440,height:820}, colorScheme:'dark', isMobile:false });
 const p = await ctx.newPage();
-await p.goto('http://localhost:8765/wedding-services.html', { waitUntil:'load' });
+await p.goto('http://localhost:8765/weddings.html', { waitUntil:'load' });
 await p.waitForTimeout(900);
 await p.screenshot({ path:'shots/out.png', fullPage:true });
 await b.close();

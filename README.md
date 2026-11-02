@@ -16,7 +16,7 @@ This is a multi-page site sharing one stylesheet and one script for a consistent
 | File                    | Purpose |
 |-------------------------|---------|
 | `index.html`            | **Home / landing.** Full-bleed country shoot portrait hero (scrolls down the photo into black), then a two-path band sending visitors to Weddings or Lessons. Leads with approachability + DWTS Austin credibility. |
-| `wedding-services.html` | **Weddings.** The wedding first-dance page (how-it-works, testimonials, gallery, wedding FAQ, pricing, contact). |
+| `weddings.html` | **Weddings.** The wedding first-dance page (how-it-works, testimonials, gallery, wedding FAQ, pricing, contact). |
 | `lessons.html`          | **Lessons.** General, beginner-focused lessons across genres. Country also serves experienced/social dancers (Nolan competed at top levels in country-western). |
 | `styles.css`            | Shared styles for all pages (palette, typography, components). |
 | `main.js`               | Shared interactions (mobile menu, scroll progress, fade-ins, FAQ accordion, smooth scroll, contact + testimonial form handler). |
