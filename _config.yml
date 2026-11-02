@@ -1,0 +1,12 @@
+# GitHub Pages (Jekyll) build settings.
+# Keep internal notes and scripts off the public site.
+exclude:
+  - CLAUDE.md
+  - CHANGELOG.md
+  - README.md
+  - social-captions.md
+  - marketplace-listing-wedding.md
+  - make_marketplace_safe_card.py
+  - make_og_image.py
+  - make_promo_cards.py
+  - vercel.json
