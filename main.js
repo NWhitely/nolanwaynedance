@@ -267,7 +267,7 @@
             set('final', days > 10 ? fmt(new Date(wed.getTime() - 7 * DAY)) : 'Day before');
             if (days < 21) {
                 set('consult', 'Today'); set('start', 'This week');
-                note.textContent = 'Tight, and doable. We keep the routine simple and drill what matters. Book today.';
+                note.textContent = 'Under three weeks is tight. We keep the routine simple. Book today.';
             } else if (consult <= today) {
                 set('consult', 'This week'); set('start', 'Next week');
                 note.textContent = 'You are inside the ideal window. Most couples need 4 to 6 lessons. Start now.';
