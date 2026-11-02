@@ -22,7 +22,7 @@
     },
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "testing.nolanwaynedance.com" }],
+      "has": [{ "type": "host", "value": "test.nolanwaynedance.com" }],
       "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
     }
   ]

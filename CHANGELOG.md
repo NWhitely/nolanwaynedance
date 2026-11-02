@@ -22,9 +22,9 @@ All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, o
 - Everything respects reduced-motion settings and is enhancement only.
 
 ### Hosting: moving to Vercel
-- `vercel.json`: security headers (HSTS, nosniff, frame, referrer, permissions), long cache on fonts, week cache on assets, and `noindex` on testing.nolanwaynedance.com.
+- `vercel.json`: security headers (HSTS, nosniff, frame, referrer, permissions), long cache on fonts, week cache on assets, and `noindex` on test.nolanwaynedance.com.
 - `.vercelignore` keeps internal files (notes, changelog, scripts) off the public site. GitHub Pages had been serving them, e.g. /CLAUDE.html.
-- The `testing` branch deploys to testing.nolanwaynedance.com; `main` will be production once the live domain moves over.
+- The `testing` branch deploys to test.nolanwaynedance.com; `main` will be production once the live domain moves over.
 
 ## 2026-09-28
 
