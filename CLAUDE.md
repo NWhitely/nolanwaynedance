@@ -79,6 +79,9 @@ Nolan's voice and the banned-words list are in the global CLAUDE.md. For this si
 
 - Applies to all copy: headlines, FAQs, pricing, forms, buttons, captions. A grammar fix is
   also fixed into the voice.
+- Section headings and labels are plain: "Reviews", "Pricing", "Questions", "Results".
+  No idioms or wordplay ("On the record", "The rate", "From the studio to the spotlight" were
+  rejected 2026-11-02 as AI tells).
 - Sound like an expert stating how it works: "Yes." "Common." "Almost any." Then the method or
   reason ("The tempo and structure of the song decide the style, and I match the dance to it.").
 - Concrete dance terms over abstractions: "classic country", "a two-step to your song".
