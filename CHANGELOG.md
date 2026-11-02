@@ -2,6 +2,10 @@
 
 All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, originally First Dance by Nolan).
 
+## 2026-11-02 (testing): booking
+
+- Book buttons open a Cal.com scheduler for a free 15-min consult call (phone). Offer copy across the site changed from "intro lesson" / "mini lesson" to the call. Contact forms are now plain "Send Message". How It Works numbered 1-4. Photos fade to color when scrolled into view.
+
 ## 2026-11-02 (testing): meshed build
 
 The redesign's structure (line of dance, counts, pull quotes, program lists, unframed footage, plain headings) with the original's noir and gold, Nolan's portrait hero with the drift and fade, and grayscale-to-color photos. Dark is the default again.

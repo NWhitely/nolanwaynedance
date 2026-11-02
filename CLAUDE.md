@@ -28,8 +28,10 @@ Nolan Wayne. The site is also the portfolio piece for Nolan's dev business, **Wa
   social dancers. Not the competitive WCS crowd; their opinion pays nothing. Jargon like
   "UCWDC" is quiet proof, never the hook.
 - **Rate:** $120 / hr (changed 2026-11-02 from $90 / 45 min).
-- **The hook is free:** Lessons and Home lead with a free 15-min intro lesson. Weddings lead
-  with a free 15-min consultation (a call, or a mini lesson). Forms do not ask lesson-or-call.
+- **The hook is free:** a free 15-min consult call, booked on Cal.com (since 2026-11-02; Nolan has
+  no fixed lesson location right now). Every Book button opens the scheduler
+  (`nolanwaynedance/consult`, account `nolanwaynedance`, weekdays noon to 4pm Central, Google
+  Calendar connected). The contact form stays as "send a message" for people who'd rather write.
 - **Promo cards** (`promo-*.jpg`, built by `make_promo_cards.py`; regenerate, never hand-edit):
   show "Book a FREE Introductory Lesson"; keep the price and any dated promo off the art.
   Fine for Instagram, Facebook feed and the website, with captions in `social-captions.md`.

@@ -52,7 +52,7 @@
                     <li><a href="/weddings">Weddings</a></li>
                     <li><a href="/lessons">Lessons</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a class="nav-book" href="#contact">Book</a></li>
+                    <li><a class="nav-book" href="#contact" data-book>Book</a></li>
                 </ul>
             </nav>
             <div class="nav-ctrl">
@@ -72,7 +72,7 @@
                     <li><a href="/weddings"><span class="p-name">Weddings</span><span class="p-desc">First dance choreography built around your song</span><span class="arrow" aria-hidden="true">&rarr;</span></a></li>
                     <li><a href="/lessons"><span class="p-name">Lessons</span><span class="p-desc">Ballroom, Country, West Coast Swing</span><span class="arrow" aria-hidden="true">&rarr;</span></a></li>
                 </ul>
-                <p class="hero-note">New here? <a class="inline-link" href="#contact">Book a free 15-min intro lesson</a></p>
+                <p class="hero-note">New here? <a class="inline-link" href="#contact" data-book>Book a free 15-min call</a></p>
             </div>
             <div class="home-hero-media">
                 <picture>
@@ -154,16 +154,17 @@
                 <div class="contact">
                     <div class="rv" data-lod-head>
                         <span class="count" aria-hidden="true">4</span>
-                        <h2>Book the free <em>intro lesson.</em></h2>
-                        <p class="lede">Start with a free 15-min intro lesson. Tell me a little about what you're hoping to learn (or the wedding you're planning) and I'll help you figure out the best place to start.</p>
+                        <h2>Book a free <em>15-min call.</em></h2>
+                        <p class="lede">Start with a free 15-min call. Tell me a little about what you're hoping to learn (or the wedding you're planning) and I'll help you figure out the best place to start.</p>
+                        <a href="#contact-form" class="btn" data-book>Pick a Time <span class="arrow" aria-hidden="true">&rarr;</span></a>
                         <ul class="contact-facts">
                             <li>Austin, Texas. Virtual lessons anywhere.</li>
-                            <li>I usually reply within 24 hours.</li>
+                            <li>Weekdays, noon to 4pm Central. Or send a message below and I'll reply within 24 hours.</li>
                         </ul>
                     </div>
-                    <form class="web3-form rv" data-success="Got it. I'll reach out within 24 hours to set up your free intro lesson." action="https://api.web3forms.com/submit" method="POST">
+                    <form id="contact-form" class="web3-form rv" data-success="Got it. I'll reply within 24 hours." action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="0758811d-08f9-4821-9109-8639d044abcf">
-                        <input type="hidden" name="subject" value="Free intro lesson request from Nolan Wayne Dance">
+                        <input type="hidden" name="subject" value="New message from Nolan Wayne Dance">
                         <input type="hidden" name="from_name" value="Nolan Wayne Dance">
                         <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true">
                         <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" required autocomplete="name" placeholder="Sarah, or Sarah &amp; Michael"></div>
@@ -178,7 +179,7 @@
                             </select>
                         </div>
                         <div class="field"><label for="message">What you have in mind</label><textarea id="message" name="message" placeholder="What would you like to learn? Any songs, styles, or dates I should know about?"></textarea></div>
-                        <button type="submit" class="btn">Book My Free Intro Lesson <span class="arrow" aria-hidden="true">&rarr;</span></button>
+                        <button type="submit" class="btn">Send Message <span class="arrow" aria-hidden="true">&rarr;</span></button>
                         <div class="form-result" role="status" aria-live="polite" hidden></div>
                     </form>
                 </div>
@@ -209,7 +210,7 @@
                 </div>
                 <div>
                     <p class="sheet-title">Contact</p>
-                    <ul><li><a href="#contact">Free intro lesson</a></li><li><a href="https://instagram.com/n.wayne_" target="_blank" rel="noopener">Instagram</a></li></ul>
+                    <ul><li><a href="#contact" data-book>Free 15-min call</a></li><li><a href="https://instagram.com/n.wayne_" target="_blank" rel="noopener">Instagram</a></li></ul>
                 </div>
             </div>
             <div class="foot-base"><span>&copy; 2026 Nolan Wayne Dance</span><span>Site by <a href="https://waynestudios.dev" target="_blank" rel="noopener">Wayne Studios</a></span></div>
