@@ -1,0 +1,7 @@
+# Internal files: keep off the public site
+*.md
+*.py
+_tools
+_masters
+.claude
+CNAME

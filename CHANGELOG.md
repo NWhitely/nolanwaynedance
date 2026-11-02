@@ -21,8 +21,10 @@ All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, o
 - "Site by Wayne Studios" footer credit, a console note for developers, and a Konami-code easter egg (the logo two-steps).
 - Everything respects reduced-motion settings and is enhancement only.
 
-### Testing site
-- `_tools/deploy-testing.sh` publishes the current branch to testing.nolanwaynedance.com (separate GitHub Pages repo, noindex, "TESTING" ribbon). The live site still deploys only from `main`.
+### Hosting: moving to Vercel
+- `vercel.json`: security headers (HSTS, nosniff, frame, referrer, permissions), long cache on fonts, week cache on assets, and `noindex` on testing.nolanwaynedance.com.
+- `.vercelignore` keeps internal files (notes, changelog, scripts) off the public site. GitHub Pages had been serving them, e.g. /CLAUDE.html.
+- The `testing` branch deploys to testing.nolanwaynedance.com; `main` will be production once the live domain moves over.
 
 ## 2026-09-28
 
