@@ -33,7 +33,7 @@
         "description": "Beginner-friendly dance lessons and wedding first dance choreography in Austin, TX. Ballroom, Country, Swing, and more.",
         "url": "https://nolanwaynedance.com/",
         "image": "https://nolanwaynedance.com/og-image.jpg",
-        "priceRange": "$90-$120",
+        "priceRange": "$120",
         "founder": { "@type": "Person", "name": "Nolan Wayne" },
         "areaServed": { "@type": "City", "name": "Austin, Texas" },
         "address": { "@type": "PostalAddress", "addressLocality": "Austin", "addressRegion": "TX", "addressCountry": "US" },
@@ -88,6 +88,7 @@
                     <a class="btn" href="wedding-services.html">Wedding first dance</a>
                     <a class="btn btn-outline" href="lessons.html">Private lessons</a>
                 </div>
+                <p class="hero-offer">New here? <a href="#contact">Book a free 15-min intro lesson</a>, or a quick call if you'd rather talk first.</p>
             </div>
         </div>
     </section>
@@ -167,8 +168,8 @@
                 </div>
                 <div class="about-text">
                     <h3>Meet Nolan</h3>
-                    <p>Hi, I'm Nolan Wayne, a professional dancer and instructor based in Austin. I've been dancing for 16+ years, competing and coaching. Most of that has been partner dancing: Ballroom (both International and American), Country, and West Coast Swing. I started in musical theatre when I was younger, competed in Ballroom in college, and I'm now Master-qualified on the United Country Western Dance Council circuit. Lately I've been social dancing and competing in West Coast Swing. I've also danced in local charity events like Dancing with the Stars Austin, a Center for Child Protection fundraiser that raises close to $3 million a year for kids in need.</p>
-                    <p>I teach everyone from total beginners to advanced competitive dancers. If you've never taken a lesson in your life, you're exactly who I built this for. I break every problem down into simple, manageable steps and keep things low-pressure and fun. Most of my students come in for a wedding first dance or their first Ballroom, Country, or Swing lesson.</p>
+                    <p>Hi, I'm Nolan Wayne, a professional dancer and instructor based in Austin. I've been dancing for 16+ years, competing and coaching. Most of that has been partner dancing: Ballroom (both International and American), Country, and West Coast Swing. I started in musical theatre when I was younger, competed in Ballroom in college, and I'm now Master-qualified on the United Country Western Dance Council circuit. Lately I've been social dancing and competing in West Coast Swing. I've also danced in local charity events like Dancing with the Stars Austin, a Center for Child Protection fundraiser that raises close to $3 million each year for kids in need.</p>
+                    <p>I teach everyone from new beginners to advanced competitive dancers. If you've never taken a lesson in your life, that's okay too. I like to break down everything into simple, manageable steps and keep things low-pressure and easy. Most of my students come in for a wedding first dance or their first Ballroom, Country, or Swing lesson.</p>
                     <p>Everyone has their own reason to dance, and I'm proud to teach all of my students with patience and zero judgment, regardless of gender or orientation. If you have questions, just reach out.</p>
                     <a href="#contact" class="btn-outline btn">Let's Talk</a>
                 </div>
@@ -182,7 +183,7 @@
             <div class="contact-content fade-in">
                 <div class="contact-info">
                     <h3>Let's Get You Dancing</h3>
-                    <p>Not sure which path is right for you? Just reach out. Tell me a little about what you're hoping to learn (or the wedding you're planning) and I'll help you figure out the best place to start.</p>
+                    <p>Start with a free 15-min intro lesson, or a quick call if you'd rather talk first. Tell me a little about what you're hoping to learn (or the wedding you're planning) and I'll help you figure out the best place to start.</p>
                     <div class="contact-details">
                         
                         <!-- Add Google Voice number here when ready: <a href="tel:+1XXXXXXXXXX">(512) XXX-XXXX</a> -->
@@ -192,9 +193,9 @@
                 </div>
                 <div class="contact-form">
                     <!-- Web3Forms: submissions delivered via Web3Forms -->
-                    <form class="web3-form" action="https://api.web3forms.com/submit" method="POST">
+                    <form class="web3-form" data-success="Got it! I'll reach out within 24 hours to set up your free intro lesson." action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="0758811d-08f9-4821-9109-8639d044abcf">
-                        <input type="hidden" name="subject" value="New inquiry from Nolan Wayne Dance">
+                        <input type="hidden" name="subject" value="Free intro lesson request from Nolan Wayne Dance">
                         <input type="hidden" name="from_name" value="Nolan Wayne Dance">
                         <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true">
                         <div class="form-group">
@@ -204,6 +205,17 @@
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <span class="form-label">Start With</span>
+                            <div class="consult-options">
+                                <label class="consult-option"><input type="radio" name="start_with" value="Free 15-min intro lesson" checked> <span>15-min intro lesson</span></label>
+                                <label class="consult-option"><input type="radio" name="start_with" value="Quick phone call"> <span>Quick phone call</span></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone <span class="optional">(optional, for a call)</span></label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(512) 555-0123">
                         </div>
                         <div class="form-group">
                             <label for="interest">I'm Interested In</label>
@@ -218,7 +230,7 @@
                             <label for="message">Tell Me What You Have in Mind</label>
                             <textarea id="message" name="message" placeholder="What would you like to learn? Any songs, styles, or dates I should know about?"></textarea>
                         </div>
-                        <button type="submit" class="btn">Send Message</button>
+                        <button type="submit" class="btn">Book My Free Intro Lesson</button>
                         <div class="form-result" role="status" aria-live="polite" hidden></div>
                     </form>
                 </div>

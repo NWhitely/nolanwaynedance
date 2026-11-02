@@ -2298,6 +2298,7 @@ html.lenis, html.lenis body { height: auto; }
 .noir-hero-content > :nth-child(2) { animation-delay: 0.47s; }
 .noir-hero-content > :nth-child(3) { animation-delay: 0.59s; }
 .noir-hero-content > :nth-child(4) { animation-delay: 0.71s; }
+.noir-hero-content > :nth-child(5) { animation-delay: 0.83s; }
 
 @keyframes noir-settle { from { transform: scale(1.1); } to { transform: none; } }
 @keyframes noir-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
@@ -2425,3 +2426,84 @@ html.lenis, html.lenis body { height: auto; }
 @media (max-width: 860px) {
     .hero-cinema .hero-lede { margin-inline: auto; }
 }
+
+.video-partner {
+    display: block;
+    margin-top: .5rem;
+    font-family: var(--sans);
+    font-size: .85rem;
+    color: var(--text-light);
+}
+
+.video-partner a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Free consultation offer */
+.hero-offer {
+    margin-top: 1rem;
+    font-size: .85rem;
+    line-height: 1.5;
+    color: rgba(247, 244, 238, 0.78);
+}
+.hero-offer a { color: var(--brass-light); text-decoration: underline; text-underline-offset: 3px; }
+.noir-hero .hero-offer { color: #2a2622; max-width: min(19rem, 24vw); }
+.noir-hero .hero-offer a { color: var(--noir); font-weight: 600; }
+@media (max-width: 860px) {
+    .noir-hero .hero-offer { color: rgba(247, 244, 238, 0.86); max-width: 22rem; }
+    .noir-hero .hero-offer a { color: var(--brass-light); }
+}
+
+.pricing-offer {
+    text-align: center;
+    border: 1px solid var(--brass);
+    padding: 1.75rem 1.5rem;
+    margin: 0 auto 2.5rem;
+    max-width: 34rem;
+}
+.pricing-offer-eyebrow {
+    font-family: var(--sans);
+    text-transform: uppercase;
+    letter-spacing: .28em;
+    font-size: .68rem;
+    color: var(--brass);
+    margin-bottom: .5rem;
+}
+.pricing-offer-title {
+    font-family: var(--display);
+    font-size: 1.6rem;
+    line-height: 1.25;
+    color: var(--text);
+    margin-bottom: .5rem;
+}
+.pricing-offer p:last-child { color: var(--text-light); margin: 0; }
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.form-group .optional { text-transform: none; letter-spacing: 0; color: var(--text-light); font-weight: 400; }
+.consult-options { display: flex; flex-wrap: wrap; gap: .75rem; }
+.form-group label.consult-option {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    flex: 1 1 12rem;
+    margin: 0;
+    padding: .9rem 1rem;
+    border: 1px solid var(--accent);
+    background: var(--surface);
+    font-size: .95rem;
+    letter-spacing: 0;
+    text-transform: none;
+    cursor: pointer;
+    transition: border-color .3s ease;
+}
+.form-group label.consult-option:has(input:checked) { border-color: var(--brass); }
+.form-group .consult-option input { width: auto; padding: 0; margin: 0; accent-color: var(--brass); }
