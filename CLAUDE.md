@@ -63,8 +63,14 @@ These read as AI. Avoid them entirely:
 
 ## Nolan's own voice (mirror this)
 
-From how Nolan writes: short, direct, casual, often lowercase, uses "idk", "i feel
-like", "yeah okay". Not formal. When in doubt, plainer and more spoken is better.
+Site copy voice (Nolan, 2026-11-02): **confident, masculine, analytical, succinct.**
+How it's said is part of the sell. State things plainly and with authority: short
+declarative sentences, concrete reasons, no hedging, no softeners ("that's fine",
+"happens a lot", "you'll both look good"), no flowery words ("flourishes", "vibe",
+"plays to your strengths"). Example: "Common. I build the routine around both of you.
+The stronger dancer gets more to do. On the floor, the gap won't show."
+
+(His texting style is casual and lowercase, but that's not the site voice.)
 
 > **Writing samples go here.** Nolan to paste a few real samples (texts, captions,
 > emails). Until then, mirror the tone above. Once samples exist, update this section
