@@ -2,6 +2,10 @@
 
 All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, originally First Dance by Nolan).
 
+## 2026-11-02 (testing): meshed build
+
+The redesign's structure (line of dance, counts, pull quotes, program lists, unframed footage, plain headings) with the original's noir and gold, Nolan's portrait hero with the drift and fade, and grayscale-to-color photos. Dark is the default again.
+
 ## 2026-11-02 (testing): full redesign, then reverted
 
 Nolan preferred the original gold look. Site files restored to the pre-redesign build; the redesign is kept on branch `redesign-line-of-dance` for reference.

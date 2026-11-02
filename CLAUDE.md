@@ -58,6 +58,24 @@ Nolan Wayne. The site is also the portfolio piece for Nolan's dev business, **Wa
 
 ---
 
+# Design system (2026-11-02: new structure, original noir and gold)
+
+- **Concept: the line of dance.** A single gold SVG line (`.lod`, built in `main.js` from every
+  `[data-count]` section) runs down the margin on the section's `data-side` and crosses between
+  sections, drawing with scroll. New sections need `data-count` and alternating `data-side`.
+- Section headers are counts: `.count` numeral plus `h2`; right-side sections use `.sec-head.is-right`.
+  "How it works" is a 5-8 count-in.
+- Kept from the original site: noir default with brass/gold accents (`--accent`), Nolan's portrait as
+  the home hero (photo drifts, headline fades on scroll), grayscale photos that turn to color on hover,
+  fade-in reveals. Light mode is opt-in via the toggle.
+- Type: Big Shoulders Display, Familjen Grotesk, Newsreader italic (reviews). Self-hosted in `fonts/`.
+- Components: `.sheet` program lists with dotted leaders, `.countin`, `.quote` pull quotes, `.qa`,
+  `.rate`, `.footage` (no device frames), `.album`.
+- Don't reintroduce: card grids, star ratings, icon trios, ✦ dividers, sheen or magnetic buttons,
+  word-split headline reveals, cursor spotlights.
+- The full-red redesign and the original build are both in git history (branch
+  `redesign-line-of-dance`, commit `eb5ad16`).
+
 # Site copy
 
 Nolan's voice and the banned-words list are in the global CLAUDE.md. For this site:
