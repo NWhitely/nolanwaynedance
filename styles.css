@@ -432,9 +432,70 @@ figcaption a { color: var(--accent); }
 .sheet.plain li { grid-template-columns: 1fr; }
 .sheet.plain .s-main::after { display: none; }
 .nav-ctrl { display: flex; align-items: center; gap: 1.25rem; }
-
-/* Home: the hero photo sits under the nav links, so the nav is solid from the start */
-.page-home .nav { background: var(--paper); border-bottom-color: var(--rule); }
 .album .a1 { position: relative; }
 .album .a1 img { position: absolute; inset: 0; }
 @media (max-width: 960px) { .album .a1 img { position: static; } }
+
+/* ==========================================================================
+   Home hero: the original banner, kept as Nolan liked it.
+   Full-bleed portrait, black serif headline over the window light, the photo
+   settles in and drifts, the headline fades as you scroll (main.js).
+   ========================================================================== */
+@font-face { font-family: "Fraunces"; src: url("fonts/fraunces-var.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("fonts/montserrat-var.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+.noir-hero { position: relative; height: max(100svh, min(133.3vw, 175svh)); overflow: hidden; background: #0b0b0b; isolation: isolate; }
+.noir-hero-media { position: absolute; inset: 0; z-index: 0; transform-origin: 50% 25%; animation: noir-settle 2.4s var(--ease) both; }
+.noir-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 0%; will-change: transform; }
+.noir-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 42svh; background: linear-gradient(to bottom, rgba(13, 12, 11, 0), var(--paper)); z-index: 1; pointer-events: none; }
+.noir-hero-frame { position: relative; z-index: 2; height: 100svh; display: flex; align-items: center; padding: 6rem 0 4rem 5.5vw; }
+.noir-hero-frame::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(241, 233, 219, 0.92) 0%, rgba(241, 233, 219, 0.72) 19%, rgba(241, 233, 219, 0) 35%); -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent); mask-image: linear-gradient(to bottom, #000 72%, transparent); z-index: -1; pointer-events: none; }
+.noir-hero-content { width: 21rem; max-width: 36vw; color: #0b0b0b; }
+.nh-kicker { font-family: "Montserrat", sans-serif; text-transform: uppercase; letter-spacing: 0.28em; font-size: 0.68rem; font-weight: 500; margin-bottom: 1.4rem; }
+.noir-hero h1 { font-family: "Fraunces", Georgia, serif; font-size: clamp(3rem, 5.2vw, 5.4rem); font-weight: 400; line-height: 0.98; letter-spacing: -0.025em; margin-bottom: 1.6rem; text-transform: none; }
+.noir-hero-lede { font-family: "Montserrat", sans-serif; font-size: 1rem; line-height: 1.6; color: #2a2622; max-width: min(19rem, 24vw); margin-bottom: 2rem; }
+.nh-actions { display: inline-flex; flex-direction: column; align-items: stretch; gap: 0.75rem; }
+.nh-btn { font-family: "Montserrat", sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; text-align: center; text-decoration: none; padding: 1.05rem 2.4rem; border: 1px solid #0b0b0b; background: #0b0b0b; color: #f1e9db; transition: background 0.45s var(--ease), color 0.45s var(--ease), border-color 0.45s var(--ease); }
+.nh-btn:hover { background: transparent; color: #0b0b0b; }
+.nh-btn-outline { background: transparent; color: #0b0b0b; border-color: rgba(11, 11, 11, 0.45); }
+.nh-btn-outline:hover { background: #0b0b0b; color: #f1e9db; border-color: #0b0b0b; }
+.nh-offer { font-family: "Montserrat", sans-serif; margin-top: 1rem; font-size: 0.85rem; line-height: 1.5; color: #2a2622; max-width: min(19rem, 24vw); }
+.nh-offer a { color: #0b0b0b; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.noir-hero-content > * { animation: noir-rise 0.9s var(--ease) both; }
+.noir-hero-content > :nth-child(1) { animation-delay: 0.35s; }
+.noir-hero-content > :nth-child(2) { animation-delay: 0.47s; }
+.noir-hero-content > :nth-child(3) { animation-delay: 0.59s; }
+.noir-hero-content > :nth-child(4) { animation-delay: 0.71s; }
+.noir-hero-content > :nth-child(5) { animation-delay: 0.83s; }
+@keyframes noir-settle { from { transform: scale(1.1); } to { transform: none; } }
+@keyframes noir-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+/* The nav sits on the bright photo until it turns solid: black type */
+.page-home .nav:not(.is-solid):not(.menu-open) { color: #0b0b0b; }
+.page-home .nav:not(.is-solid):not(.menu-open) .wordmark span, .page-home .nav:not(.is-solid):not(.menu-open) .nav-book { color: #8a6a3c; }
+.page-home .nav:not(.is-solid):not(.menu-open) .theme-toggle { border-color: rgba(11, 11, 11, 0.35); }
+.page-home .nav:not(.is-solid):not(.menu-open) .theme-toggle::before { border-color: #0b0b0b; background: linear-gradient(90deg, #0b0b0b 50%, transparent 50%); }
+
+/* Phones and portrait screens: photo fills the screen, white type at the bottom */
+@media (max-width: 900px), (max-aspect-ratio: 1/1) {
+    .noir-hero { height: 100svh; }
+    .noir-hero::after { display: none; }
+    .noir-hero-frame { align-items: flex-end; padding: 6rem 1.5rem 3rem; }
+    .noir-hero-frame::before { background: linear-gradient(to bottom, rgba(11, 11, 11, 0) 36%, rgba(11, 11, 11, 0.55) 58%, rgba(11, 11, 11, 0.95) 100%); -webkit-mask-image: none; mask-image: none; }
+    .noir-hero-content { width: 100%; max-width: 30rem; color: #f7f4ee; }
+    .nh-kicker { color: #d6bb8c; margin-bottom: 0.9rem; }
+    .noir-hero h1 { font-size: clamp(2.5rem, 11vw, 4rem); line-height: 1.02; color: #f7f4ee; margin-bottom: 1rem; }
+    .noir-hero-lede { color: rgba(247, 244, 238, 0.86); max-width: 22rem; margin-bottom: 1.6rem; }
+    .nh-actions { gap: 0.6rem; }
+    .nh-btn { background: #f7f4ee; color: #0b0b0b; border-color: #f7f4ee; }
+    .nh-btn:hover { background: transparent; color: #f7f4ee; }
+    .nh-btn-outline { background: transparent; color: #f7f4ee; border-color: rgba(247, 244, 238, 0.6); }
+    .nh-btn-outline:hover { background: #f7f4ee; color: #0b0b0b; border-color: #f7f4ee; }
+    .nh-offer { color: rgba(247, 244, 238, 0.86); max-width: 22rem; }
+    .nh-offer a { color: #d6bb8c; }
+}
+@media (max-width: 900px), (max-aspect-ratio: 1/1) {
+    .page-home .nav:not(.is-solid):not(.menu-open) { color: #0b0b0b; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .noir-hero-media, .noir-hero-content > * { animation: none; }
+}

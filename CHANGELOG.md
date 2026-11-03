@@ -4,6 +4,8 @@ All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, o
 
 ## 2026-11-03 (testing)
 
+- Home: the original hero banner is back (full-bleed portrait, serif "Learn to Dance", the two buttons, free-call line), with the new sections below it.
+
 - Cal.com sample event types deleted; only `consult` remains.
 - Promo cards regenerated with "Book a FREE 15-Min Call"; captions and the Marketplace listing now offer the free call.
 - Lessons hero now plays a 14-second, 1.4 MB loop (`assets/countryswing-hero.mp4`) instead of the full 15 MB video; the full video still plays in the Competition section on demand.

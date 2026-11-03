@@ -24,6 +24,7 @@
     <meta name="twitter:image" content="https://nolanwaynedance.com/og-image.jpg">
     <link rel="preload" href="fonts/big-shoulders-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/familjen-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("nwd-theme");if(t==="dark"||t==="light")d.setAttribute("data-theme",t);}catch(e){}})();</script>
     <script type="application/ld+json">
@@ -63,23 +64,24 @@
     </header>
 
     <main>
-        <section class="home-hero">
-            <div class="home-hero-copy hero-fade">
-                <p class="kicker">Austin, Texas</p>
-                <h1 class="display">Learn <br>to <em>dance.</em><span class="visually-hidden"> Dance lessons and wedding first dances in Austin, TX, with Nolan Wayne</span></h1>
-                <p class="lede">Private dance lessons and wedding first dances. No experience needed.</p>
-                <ul class="paths">
-                    <li><a href="/weddings"><span class="p-name">Weddings</span><span class="p-desc">First dance choreography built around your song</span><span class="arrow" aria-hidden="true">&rarr;</span></a></li>
-                    <li><a href="/lessons"><span class="p-name">Lessons</span><span class="p-desc">Ballroom, Country, West Coast Swing</span><span class="arrow" aria-hidden="true">&rarr;</span></a></li>
-                </ul>
-                <p class="hero-note">New here? <a class="inline-link" href="#contact" data-book>Book a free 15-min call</a></p>
-            </div>
-            <div class="home-hero-media">
+        <section class="noir-hero" id="hero">
+            <div class="noir-hero-media">
                 <picture>
                     <source type="image/webp" srcset="assets/nolan-hero.webp">
-                    <img class="hero-drift" src="assets/nolan-hero.jpg" width="1520" height="2027" alt="Nolan Wayne in a black cowboy hat, sitting in a bright studio" fetchpriority="high">
+                    <img class="noir-hero-img hero-drift" src="assets/nolan-hero.jpg" width="1520" height="2027" alt="Nolan Wayne in a black cowboy hat, sitting in a bright studio" fetchpriority="high">
                 </picture>
-                <span class="media-tag">Nolan Wayne</span>
+            </div>
+            <div class="noir-hero-frame">
+                <div class="noir-hero-content hero-fade">
+                    <p class="nh-kicker">Austin, Texas</p>
+                    <h1>Learn to Dance<span class="visually-hidden"> with Nolan Wayne, dance lessons and wedding first dances in Austin, TX</span></h1>
+                    <p class="noir-hero-lede">Private dance lessons and wedding first dances. No experience needed.</p>
+                    <div class="nh-actions">
+                        <a class="nh-btn" href="/weddings">Wedding first dance</a>
+                        <a class="nh-btn nh-btn-outline" href="/lessons">Private lessons</a>
+                    </div>
+                    <p class="nh-offer">New here? <a href="#contact" data-book>Book a free 15-min call</a></p>
+                </div>
             </div>
         </section>
 
