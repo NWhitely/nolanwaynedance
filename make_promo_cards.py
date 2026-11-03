@@ -29,7 +29,7 @@ DOMAIN = "nolanwaynedance.com"
 HANDLE = "@n.wayne_"
 CRED = "16+ YEARS TEACHING & COMPETING"
 EYEBROW = "NOLAN WAYNE   ·   AUSTIN, TX"
-CTA = "Book a FREE Introductory Lesson"
+CTA = "Book a FREE 15-Min Call"
 
 FRAUNCES = "fonts/Fraunces.ttf"
 MONTSERRAT = "fonts/Montserrat.ttf"

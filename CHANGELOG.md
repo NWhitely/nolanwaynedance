@@ -2,6 +2,12 @@
 
 All notable changes to the Nolan Wayne Dance website (formerly Dance by Nolan, originally First Dance by Nolan).
 
+## 2026-11-03 (testing)
+
+- Cal.com sample event types deleted; only `consult` remains.
+- Promo cards regenerated with "Book a FREE 15-Min Call"; captions and the Marketplace listing now offer the free call.
+- Lessons hero now plays a 14-second, 1.4 MB loop (`assets/countryswing-hero.mp4`) instead of the full 15 MB video; the full video still plays in the Competition section on demand.
+
 ## 2026-11-02 (testing): booking
 
 - Book buttons open a Cal.com scheduler for a free 15-min consult call (phone). Offer copy across the site changed from "intro lesson" / "mini lesson" to the call. Contact forms are now plain "Send Message". How It Works numbered 1-4. Photos fade to color when scrolled into view.

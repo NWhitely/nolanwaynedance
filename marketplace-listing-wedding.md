@@ -40,8 +40,8 @@ How it works:
 - Austin and the surrounding area
 - 16+ years dancing, teaching and competing
 
-The first lesson is low key. We run through your song and see what's doable, no
-commitment after that.
+It starts with a free 15-minute call about your song and your date. No commitment
+after that.
 
 Send me your song and your wedding date and I'll tell you what it'd take to be
 ready in time.

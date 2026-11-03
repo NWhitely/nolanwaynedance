@@ -16,8 +16,8 @@ Pair each with its promo card (square for feed, `-9x16` for stories/reels):
 > on-platform). These captions and the free-intro hook are fine for **Instagram / Facebook feed
 > + the website**, just not Marketplace.
 
-> **Current promo line (first line of each caption; update the date):**
-> New student special: your first lesson is free, now through June 30. Booking now.
+> **Current promo line (first line of each caption):**
+> Free 15-min call to get started. Book a time at nolanwaynedance.com.
 
 ---
 
@@ -27,7 +27,7 @@ Pair each with its promo card (square for feed, `-9x16` for stories/reels):
 Country Dance Lessons in Austin | Two-Step & Country Swing | Beginners Welcome
 
 **Description:**
-New student special: your first lesson is free, now through June 30. Booking now.
+Free 15-min call to get started. Book a time at nolanwaynedance.com.
 
 Want to two-step before your next night out? I teach country dancing for people who've
 never done it. Two-step, country swing, and how to move around the floor without standing
@@ -39,7 +39,7 @@ we do it online.
 If you want to go further, I teach the full set of partner styles too: triple two-step,
 nightclub two-step, polka, waltz, cha cha, east coast and west coast swing.
 
-Book a free introductory lesson now. Message me and tell me what you're after.
+Book a free 15-min call. Tell me what you're after.
 
 nolanwaynedance.com · @n.wayne_
 
@@ -51,7 +51,7 @@ nolanwaynedance.com · @n.wayne_
 Wedding First Dance Choreography in Austin | Built Around Your Song | All Levels
 
 **Description:**
-New student special: your first lesson is free, now through June 30. Booking now.
+Free 15-min call to get started. Book a time at nolanwaynedance.com.
 
 Got a first dance coming up and no idea where to start? That's most of the couples I work
 with. I'll build a dance around your song and keep it at a pace you're both comfortable
@@ -63,7 +63,7 @@ couples who've never danced a step.
 I'll come to you, we can meet at a studio, or we do it online. Over 10 years teaching here
 in Austin.
 
-Book a free introductory lesson now. Send me your song and your wedding date to get started.
+Book a free 15-min call. Bring your song and your wedding date.
 
 nolanwaynedance.com · @n.wayne_
 
@@ -75,7 +75,7 @@ nolanwaynedance.com · @n.wayne_
 Private Dance Lessons in Austin | Beginners Welcome | Wedding, Country, Ballroom, Swing
 
 **Description:**
-New student special: your first lesson is free, now through June 30. Booking now.
+Free 15-min call to get started. Book a time at nolanwaynedance.com.
 
 Always wanted to learn to dance and never had a reason to start? Here's your reason. I
 teach private lessons for total beginners in Austin. Low-pressure, and we go at your pace.
@@ -87,7 +87,7 @@ the house and meet people.
 Singles or couples. I'll come to you, we can meet at a studio, or we do it online. Over 10
 years teaching.
 
-Book a free introductory lesson now. Tell me what you've got in mind and we'll find a starting point.
+Book a free 15-min call. Tell me what you have in mind and we'll find the starting point.
 
 nolanwaynedance.com · @n.wayne_
 
@@ -99,7 +99,7 @@ nolanwaynedance.com · @n.wayne_
 Adult Dance Lessons in Austin | Never Too Late | Ballroom, Two-Step, Swing, Social
 
 **Description:**
-New student special: your first lesson is free, now through June 30. Booking now.
+Free 15-min call to get started. Book a time at nolanwaynedance.com.
 
 Always figured you'd learn to dance one day? This is the day. I teach adults who've never
 danced a step, here in Austin, and a lot of my students are picking it up later in life.
@@ -111,7 +111,7 @@ with it. It's also just a good way to get out of the house and meet people.
 For couples and singles. I'll come to you, we can meet at a studio, or we do it online.
 Over 10 years teaching.
 
-Book a free introductory lesson now. Send me a message and we'll set it up.
+Book a free 15-min call and we'll set it up.
 
 nolanwaynedance.com · @n.wayne_
 
@@ -119,18 +119,12 @@ nolanwaynedance.com · @n.wayne_
 
 ## Pricing & the offer
 
-- **The hook is the free first lesson**, in the first line of every caption. For a beginner,
-  "first one's free" beats any number; a no-risk first lesson is a cheap way to get a recurring
-  client in the door. Quote the $120 / hr rate in conversation, after they've met you.
-- **Don't post a price on Instagram/Facebook posts** — the free intro is the pull. (On
+- **The hook is the free 15-min call** (since 2026-11-02), in the first line of every caption. It's
+  booked on the website through Cal.com. Quote the $120 / hr rate on the call, not in the post.
+- **Don't post a price on Instagram/Facebook posts** — the free call is the pull. (On
   Marketplace it's different: the real $120 goes in the price field. See
   `marketplace-listing-wedding.md`.)
-- **The promo cards already show the FREE button**, so FREE is on the art; the dated deadline
-  stays in the caption text, where you edit one line when it changes.
-- **Alternatives if a full free lesson feels like too much to give away:**
-  - *Free consult* — a quick 10-15 min call instead of a full lesson. Swap "free intro lesson"
-    → "free intro call."
-  - *New-student special* — e.g. first lesson half off ($45). Paid, but still a hook.
+- **The promo cards show the FREE 15-min call button**, so the offer is on the art and never expires.
 
 ## Posting tips (Instagram / Facebook)
 - Post the four to the feed; use the `-9x16` versions for stories and reels.
