@@ -19,7 +19,7 @@ Nolan Wayne. The site is also the portfolio piece for Nolan's dev business, **Wa
 - Results: 1st place Advanced Two-Step Jack & Jill (with Em Andrews, @emyandrews) and
   Strictly (with Kristina "Zaza" Casazza, @littlekzaza), Ask Me To Dance Wild West
   Competition, Cedar Park TX, 2026-06-12. Country Swing Finals at Forever Country (Dallas).
-  UCWDC Worlds.
+  UCWDC World Championships (Pro-Am).
 
 ## Positioning and offer
 
